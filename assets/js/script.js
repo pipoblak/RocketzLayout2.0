@@ -64,28 +64,38 @@ function toggleCategoriesNav(){
 
 // Posições da Header
 var isCategoriesShowing=true;
-$(window).scroll(function(){
-  var scroll = $(window).scrollTop();
+var isCategoriesMenuOnTop=true;
+var isAssistBarActive;
+$(".body-holder").scroll(function(event){
+  var scroll = $(event.target).scrollTop();
+  if(isAssistBarActive){
+    var mydivpos = document.getElementById("pricelowered").offsetTop;
+    if(scroll >= mydivpos)
+      $("div[name*=pricelifted]").attr("class"," wow animated fadeInDown");
+    else
+      $("div[name*=pricelifted]").attr("class"," hidden wow animated fadeOutUp");
+  }
   if (scroll >= 1){
+    isCategoriesMenuOnTop=false;
     if(isCategoriesShowing){
       toggleCategoriesNav();
     }
   }
   else if(scroll==0){
+    isCategoriesMenuOnTop=true;
     toggleCategoriesNav();
   }
+
+
 });
 $(document).on("click",".logo",function(event){
-  toggleCategoriesNav();
+  if(!isCategoriesMenuOnTop){
+      toggleCategoriesNav();
+  }
+
+
 });
 
-$(window).scroll(function(event){
-  var mydivpos = document.getElementById("pricelowered").offsetTop;
-  var scrollPos = $(event.target).scrollTop();
-
-  if(scrollPos >= mydivpos)
-    document.getElementById("pricelifted").className = "wow animated fadeInDown";
-  else
-    document.getElementById("pricelifted").className = "hidden wow animated fadeOutUp";
+$(".body-holder").scroll(function(event){
 
 });

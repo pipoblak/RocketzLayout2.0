@@ -4,14 +4,146 @@
 html,body{
   padding: 0;
   margin: 0;
-
+  height: 100%;
 }
 
+@media only screen and (min-width: 1000px) {
+    .menushow {
+        display: none;
+    }
+    .nav-mobile{
+    display: none !important;}
+}
+
+#menu-toggle {
+    z-index: 1;
+    font-size: 35px;
+    float: right;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 17px 10px;
+    padding: 0px 6px;
+    line-height: 0;
+	height: 37px;
+	width: 35px;
+}
+
+#menu-toggle:hover {
+    background: #4188F7;
+    border-color: #4188F7;
+    color: #fff;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    width: 260px;
+    height: 100%;
+    margin-right: -260px;
+    overflow-y: auto;
+    background: #606060;
+    z-index: 99999999;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+    position: absolute;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.27);
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+    padding: 15px 15px;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #396BD0;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+#sidebar-wrapper.active {
+    right: 250px;
+    width: 260px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.toggle {
+    margin: 5px 5px 0 0;
+}
+.close-btn {
+    display: block;
+    color: #FFFFFF;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    width: 100%;
+    padding-right: 25px;
+}
+.close-btn:hover {
+    color: #396BD0;
+}
 .body-holder{
   width: 100%;
   display: flex;
   flex-direction: column;
   overflow: auto;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #252525;
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
 }
 .sticky{
   position: fixed;
@@ -228,7 +360,7 @@ html,body{
 	-webkit-border-radius: 0px 0px 0px 0px;
 	border: 0px solid #252525;
 	background-color:#252525;
-	z-index: 1;
+	z-index: 2;
 }
 .navdrop {
   top:72px;
@@ -236,8 +368,8 @@ html,body{
 	width: 100%;
 	height: 72px;
 	background-color: rgba(255,255,255,1.00);
-	transition: all 1s;
-	z-index: 0;
+	transition: all 0.5s;
+	z-index:1;
   display: flex;
   flex-direction: row;
 
@@ -247,13 +379,31 @@ html,body{
 	padding: 0 0 0 0;
 	width: 100%;
 	background-color: rgba(255,255,255,1.00);
-	z-index: 0;
+	z-index: 1;
   height: 0;
+}
+.navlift>span{
+  opacity: 0;
 }
 .navlift>.nav-items>div>div{
   opacity: 0;
 }
-
+.nav-mobile-button{
+  color:#656565;
+  font-size: 32px;
+  margin: auto;
+  padding: 3px;
+}
+.nav-items-mobile{
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.nav-items-mobile::-webkit-scrollbar {
+    height: 0px;
+    background-color: transparent;
+}
 .nav-items{
   display: flex;
   flex-direction: row;
@@ -279,6 +429,7 @@ html,body{
 .nav-item{
   height: 100%;
   width: 80px;
+  min-width: 80px;
   float: left;
   display: flex;
   flex-direction: column;
@@ -318,6 +469,31 @@ html,body{
 	width: 100%;
 	height: 56px;
 	background-color: rgba(255,255,255,1.00);
+}
+#main-content{
+  top:144px;
+  position: relative;
+  z-index: 0;
+  max-height: 500px;
+  height: 53%;
+}
+.main-banner{
+  height: 100%;
+  display: flex;
+  background: #2ecc71;
+  -moz-box-shadow:    inset 0 0 40px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3);
+  box-shadow:         inset 0 0 40px rgba(0, 0, 0, 0.3);
+}
+.main-banner>div{
+  display: flex;
+}
+.img-banner{
+  margin: auto;
+  margin-top: 40px;
+  width: 100%;
+  max-width:1060px;
+
 }
 
 .hidden { display: none; }

@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/ionicons.min.css">
 
 	<!-- fonts -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -27,7 +28,7 @@
     <![endif]-->
 </head>
 <body id="home" style="display:flex;">
-	<div class="body-holder" style="background-color: ">
+	<div class="body-holder" style="background-color: #6a6a6a;">
 		<div id="preloader"></div>
 		<div class="navbar">
 			<div class="logo-button-holder">
@@ -37,6 +38,19 @@
 				</div>
 
 			</div>
+
+			<nav id="sidebar-wrapper">
+		<a id="menu-close" href="#" class="close-btn toggle"><i class="ion-ios-close-empty"></i></a>
+	    <ul class="sidebar-nav">
+		    <li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+	    </ul>
+	</nav>
+
 			<div class="main-navbar">
 				<section class="container">
 					<section class="row">
@@ -63,11 +77,12 @@
 								<span class="fa fa-shopping-cart"></span>
 							</div>
 						</div>
+						<a id="menu-toggle" href="#" class="col-xs-12 toggle wow rotateIn menushow" data-wow-delay="0.5s"><i class="ion-navicon"></i></a>
 					</section>
 				</section>
 			</div>
 		</div>
-		<div class="navdrop">
+		<div class="navdrop hidden-xs hidden-sm">
 			<div class="container nav-items">
 				<div class="nav-items-left">
 					<div class="nav-item">
@@ -120,10 +135,66 @@
 					</div>
 				</div>
 			</div>
-			<div id="pricelifted" class="hidden">
+			<div id="pricelifted" class="hidden" name="pricelifted">
 				<span class="product-name">Nome do Produto</span>
 			</div>
 
+		</div>
+
+		<div class="navdrop nav-mobile ">
+			<span class="fa fa-angle-left nav-mobile-button"></span>
+			<div class="container nav-items-mobile">
+				<div class="nav-items-mobile">
+					<div class="nav-item">
+						<img alt="Mousepad Gamer" src="assets/img/mousepad.svg">
+						<span class="item-label"> Mousepad</span>
+					</div>
+					<div class="nav-item">
+						<img alt="Headset Gamer" src="assets/img/headset.svg">
+						<span class="item-label"> Headset</span>
+					</div>
+					<div class="nav-item">
+						<img alt="Mouse Gamer" src="assets/img/mouse.svg">
+						<span class="item-label"> Mouse</span>
+					</div>
+					<div class="nav-item">
+						<img alt="Teclado Gamer" src="assets/img/teclado.svg">
+						<span class="item-label"> Teclado</span>
+					</div>
+					<div class="nav-item">
+						<img alt="Workstation" src="assets/img/workstation.svg">
+						<span class="item-label"> Workstation</span>
+					</div>
+					<div class="nav-item">
+						<img alt="Pc Gamer" src="assets/img/pc.svg">
+						<span class="item-label"> Pc Gamer</span>
+					</div>
+					<div class="nav-item">
+						<img alt="Cadeira Gamer" src="assets/img/cadeira.svg">
+						<span class="item-label"> Cadeira</span>
+					</div>
+					<div class="nav-item">
+						<img alt="Monitor Gamer" src="assets/img/monitor.svg">
+						<span class="item-label"> Monitor</span>
+					</div>
+					<div class="nav-item">
+						<img alt="Webcam" src="assets/img/webcam.svg">
+						<span class="item-label"> Webcam</span>
+					</div>
+					<div class="nav-item">
+						<img alt="Simuladores" src="assets/img/simuladores.svg">
+						<span class="item-label"> Simuladores</span>
+					</div>
+					<div class="nav-item">
+						<img alt="Simuladores" src="assets/img/vestuario.svg">
+						<span class="item-label"> Vestuário</span>
+					</div>
+				</div>
+				<span class="fa fa-angle-right nav-mobile-button"></span>
+			</div>
+			<div id="pricelifted" class="hidden" name="pricelifted" >
+				<span class="product-name">Nome do Produto</span>
+			</div>
 		</div>
 		<div class="search-results-holder hidden">
 			<div class="search-results hidden">
@@ -131,153 +202,19 @@
 			</div>
 		</div>
 
-		<section id="banner">
-			<section class="container">
 
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br><div id="pricelowered">Preço</div>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
+		<section id="main-content">
+			<div class="main-banner">
+				<div class="container">
+					<img src="assets/img/banner.png" alt="" class="img-banner">
+				</div>
+			</div>
+
+			<section class="container">
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<div id="pricelowered">Preço</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br>
 			</section>
 		</section>
 	</div>
@@ -289,6 +226,9 @@
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/owl.carousel.js"></script>
 	<script src="assets/js/script.js"></script>
+	<script type="text/javascript">
+					 isAssistBarActive=true;
 
+	</script>
 </body>
 </html>
