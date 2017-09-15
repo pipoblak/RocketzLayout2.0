@@ -92,10 +92,15 @@ $(document).on("click",".logo",function(event){
   if(!isCategoriesMenuOnTop){
       toggleCategoriesNav();
   }
-
-
 });
+$(document).on("click",".nav-mobile-button",function(event){
+  var button = $(event.target).attr("data-id");
+  var target = $($(".nav-items-mobile")[1]);
+  var scroll = target.scrollLeft();
+  if(button=="right")
+    target.scrollLeft(target.scrollLeft()+ 56);
+  else
+    target.scrollLeft(target.scrollLeft()- 56);
 
-$(".body-holder").scroll(function(event){
-
+  console.log(target );
 });

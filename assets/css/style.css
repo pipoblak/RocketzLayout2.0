@@ -7,10 +7,43 @@ html,body{
   height: 100%;
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+}
 @media only screen and (min-width: 1000px) {
     .menushow {
         display: none;
     }
+    .cart-mobile-holder{
+      height: 0px !important;
+      margin-top: 56px;
+    }
+    .main-banner{
+      min-height: 500px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .footer-addresses{
+      margin: auto !important;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .nav-mobile-button{
+    width: 10% !important;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .main-banner{
+    height: 30% !important;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .main-banner{
+    height: 25% !important;
+  }
 }
 
 #menu-toggle {
@@ -127,6 +160,7 @@ html,body{
   flex-direction: column;
   overflow: auto;
   overflow-x: hidden;
+  height: 100%;
 }
 ::-webkit-scrollbar {
     width: 6px;
@@ -343,7 +377,7 @@ html,body{
   display: block;
 }
 .logo:hover::before{
-  transform: scale(1.01);
+  transform: scale(1.05);
 }
 .logo-full{
   width: 30%;
@@ -390,16 +424,21 @@ html,body{
   color:#656565;
   font-size: 32px;
   margin: auto;
-  width: 15%;
+  width: 40%;
   text-align: center;
   height: 100%;
   line-height: 72px !important;
+}
+.nav-mobile-button:hover{
+  background: #ccc;
 }
 .nav-items-mobile{
   display: flex;
   flex-direction: row;
   overflow-x: auto;
   overflow-y: hidden;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 .nav-items-mobile::-webkit-scrollbar {
     height: 0px;
@@ -438,6 +477,7 @@ html,body{
   align-content: center;
 	transition: all 0.25s;
 }
+
 .item-label{
   color:#656565;
   font-family: "Saira";
@@ -477,13 +517,12 @@ html,body{
 }
 #main-content{
   top:144px;
+  height: 100%;
   position: relative;
   z-index: 0;
-  max-height: 500px;
-  height: 53%;
 }
 .main-banner{
-  height: 100%;
+  height: 40%;
   display: flex;
   background: #2ecc71;
   -moz-box-shadow:    inset 0 0 40px rgba(0, 0, 0, 0.3);
@@ -503,17 +542,45 @@ html,body{
 
 .hidden { display: none; }
 
-.cart-mobile-float{
+.cart-mobile-holder{
   height: 56px;
-  width: 56px;
-  position: fixed;
+  width: 100%;
   background: #252525;
-  bottom: 16px;
-  right: 16px;
-  border-radius: 50%;
-  border: 1px solid white;
-  opacity: 0.8;
+  display: flex;
+  transition: all 1s;
+  position: relative;
 }
+.cart-mobile-info-holder{
+  width: 90%;
+  height: 100%;
+}
+.cart-mobile-icon-holder{
+  width:10%;
+  height: 100%;
+  display: flex;
+}
+.cart-mobile-icon-holder>span{
+  color:white;
+  margin: auto;
+  font-size: 24px;
+  position: relative;
+  margin-right: 16px;
+}
+
+.cart-mobile-icon-holder>span::after{
+  content: "1";
+  font-size: 9px;
+  font-family: "Saira";
+  position: absolute;
+  bottom: -8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  text-align: center;
+  margin: auto;
+  line-height: 1.334;
+}
+
 #footer {
 	background:#252525;
 	width:100%;
@@ -530,34 +597,41 @@ html,body{
 	font-size: 18px;
 	font-weight: 200;
 }
-
-.footer-content2 {
-	text-align: left;
-	margin-left: 120px;
-	width: 250px;
+.footer-content > .fa{
+  padding: 8px;
+}
+.footer-addresses-holder{
+  display: flex;
+  flex-direction: column;
+}
+.footer-addresses {
 	font-size: 12px;
 	font-weight: 200;
 	color: #888888;
+	text-align: left;
+	margin-left: 30%;
+  display: flex;
+  padding-top: 16px;
 }
-
-@media only screen and (max-width: 1200px) {
-    .footer-content2 {
-		margin-left: 80px;
-    }
+.footer-addresses > span{
+  margin: auto;
 }
-
-@media only screen and (max-width: 991px) {
-    .footer-content2 {
-		margin-left: 250px;
-    }
+.footer-addresses > .fa{
+  color: #fff;
+  font-size: 35px;
+  padding: 16px;
+  position: relative;
+  display: flex;
 }
-@media only screen and (max-width: 605px) {
-    .footer-content2 {
-		margin-left: 150px;
-    }
-}
-.footer-icons {
-    font-size: 25px;
-	padding-right: 10px;
-
+.footer-addresses > .fa::after{
+  content: attr(data-location);
+  position: absolute;
+  color:white;
+  font-family: "Saira";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-weight: 100;
+  font-size: 10px;
+  text-align: center;
 }
