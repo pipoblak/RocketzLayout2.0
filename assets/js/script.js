@@ -12,13 +12,16 @@ $(window).load(function(){
 // Futuro sidebar
 $("#menu-close").click(function(e) {
     e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
+    $("#sidebar-wrapper").toggleClass("hidden");
+    setTimeout(function(){$("#sidebar-wrapper").toggleClass("active")},100);
 });
 
 // Futuro sidebar
 $("#menu-toggle").click(function(e) {
     e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
+    $("#sidebar-wrapper").toggleClass("hidden");
+    setTimeout(function(){$("#sidebar-wrapper").toggleClass("active")},100);
+
 });
 
 // Futuro sidebar
@@ -101,6 +104,19 @@ $(document).on("click",".nav-mobile-button",function(event){
     target.scrollLeft(target.scrollLeft()+ 56);
   else
     target.scrollLeft(target.scrollLeft()- 56);
-
-  console.log(target );
 });
+$("#sidebar-wrapper").on({
+    'touchstart mousedown': function (e) {
+        $(e.target).on('touchmove mousemove', move);
+        move(e,$(document).find("#sidebar-wrapper"));//you could do `$(this).trigger('touchmove', e)` but a conventional function call keeps `move` simple.
+    },
+    'touchend mouseup': function (e) {
+        $(e.target).off('touchmove mousemove');
+    }
+});
+function move(e,target) {
+  target = $(target);
+  target.attr("style","left:"+(e.pageX - 10) + 'px');
+  console.log(target);
+  console.log(e.pageX);
+}
