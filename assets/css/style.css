@@ -535,13 +535,30 @@ body{
 }
 
 .footer-content2 {
-	color: #fff;
 	text-align: left;
-	padding-top: 50px;
-	font-size: 13px;
+	margin-left: 120px;
+	width: 250px;
+	font-size: 12px;
 	font-weight: 200;
+	color: #888888;
 }
 
+@media only screen and (max-width: 1200px) {
+    .footer-content2 {
+		margin-left: 80px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .footer-content2 {
+		margin-left: 250px;
+    }
+}
+@media only screen and (max-width: 605px) {
+    .footer-content2 {
+		margin-left: 150px;
+    }
+}
 .footer-icons {
     font-size: 25px;
 	padding-right: 10px;
