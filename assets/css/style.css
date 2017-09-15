@@ -7,6 +7,10 @@ html,body{
   height: 100%;
 }
 
+body{
+  display:flex;
+ flex-direction:column;
+ }
 @media only screen and (min-width: 1000px) {
     .menushow {
         display: none;
@@ -127,6 +131,7 @@ html,body{
   flex-direction: column;
   overflow: auto;
   overflow-x: hidden;
+  height: 100%;
 }
 ::-webkit-scrollbar {
     width: 6px;
@@ -505,14 +510,12 @@ html,body{
 
 .cart-mobile-float{
   height: 56px;
-  width: 56px;
-  position: fixed;
-  background: #252525;
-  bottom: 16px;
-  right: 16px;
-  border-radius: 50%;
-  border: 1px solid white;
-  opacity: 0.8;
+  width: 100%;
+  background:#252525;
+}
+.cart-mobile-float > span{
+  font-size: 24px;
+  color:white;
 }
 #footer {
 	background:#252525;
