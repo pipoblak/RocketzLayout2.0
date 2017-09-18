@@ -1,9 +1,37 @@
 ﻿// Preloader //
 
+var sidewrapper;
+closeSidewrapper=function(){
+  sidewrapper.close();
+}
 jQuery(document).ready(function($) {
+
+
+
 
 $(window).load(function(){
   $('#preloader').fadeOut('slow',function(){$(this).remove();});
+   sidewrapper = new Slideout({
+    'panel': document.getElementById('content'),
+    'menu': document.getElementById('sidebar-wrapper'),
+    'padding': 256,
+    'tolerance': 70,
+    'side': 'right'
+  });
+  sidewrapper.on('beforeopen', function() {
+    this.panel.classList.add('content-open');
+  })
+  .on('open', function() {
+    this.panel.addEventListener('click', closeSidewrapper);
+  })
+  .on('beforeclose', function() {
+    this.panel.classList.remove('content-open');
+    // this.menu.classList
+    $("html").removeClass("slideout-open");
+    this.panel.removeEventListener('click', closeSidewrapper);
+  });
+  sidewrapper.disableTouch();
+
 });
 
 });
@@ -12,15 +40,13 @@ $(window).load(function(){
 // Futuro sidebar
 $("#menu-close").click(function(e) {
     e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("hidden");
-    setTimeout(function(){$("#sidebar-wrapper").toggleClass("active")},100);
+    closeSidewrapper();
 });
 
 // Futuro sidebar
 $("#menu-toggle").click(function(e) {
     e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("hidden");
-    setTimeout(function(){$("#sidebar-wrapper").toggleClass("active")},100);
+    sidewrapper.toggle();
 
 });
 
@@ -73,10 +99,16 @@ $(".body-holder").scroll(function(event){
   var scroll = $(event.target).scrollTop();
   if(isAssistBarActive){
     var mydivpos = document.getElementById("pricelowered").offsetTop;
+    var assistBar= $("div[name*=pricelifted]");
     if(scroll >= mydivpos)
+
       $("div[name*=pricelifted]").attr("class"," wow animated fadeInDown");
     else
-      $("div[name*=pricelifted]").attr("class"," hidden wow animated fadeOutUp");
+      if(!assistBar.hasClass("hidden")){
+        $("div[name*=pricelifted]").attr("class","wow animated fadeOutUp");
+        assistBar.addClass("hidden");
+      }
+
   }
   if (scroll >= 1){
     isCategoriesMenuOnTop=false;
@@ -105,18 +137,3 @@ $(document).on("click",".nav-mobile-button",function(event){
   else
     target.scrollLeft(target.scrollLeft()- 56);
 });
-$("#sidebar-wrapper").on({
-    'touchstart mousedown': function (e) {
-        $(e.target).on('touchmove mousemove', move);
-        move(e,$(document).find("#sidebar-wrapper"));//you could do `$(this).trigger('touchmove', e)` but a conventional function call keeps `move` simple.
-    },
-    'touchend mouseup': function (e) {
-        $(e.target).off('touchmove mousemove');
-    }
-});
-function move(e,target) {
-  target = $(target);
-  target.attr("style","left:"+(e.pageX - 10) + 'px');
-  console.log(target);
-  console.log(e.pageX);
-}

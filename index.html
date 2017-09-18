@@ -1,11 +1,15 @@
 ﻿ <!DOCTYPE html>
 <html lang="pt">
 <head>
-	<title>Site Rocketz</title>
+	<title>Rocketz - Equipe-se para vencer</title>
 
 	<!-- meta -->
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
 	<!-- css -->
@@ -28,8 +32,21 @@
     <![endif]-->
 </head>
 <body id="home" style="display:flex;">
-	<div class="body-holder" style="background-color:;">
-		<div id="preloader"></div>
+	<nav id="sidebar-wrapper" class="">
+		<div class="sidebar-wrapper-content">
+				<ul class="sidebar-nav">
+					<li><a href="#" class="sidebar-text myaccount">Minha conta<span class="fa fa-user"></span></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+				<a id="menu-close" href="#" class="close-btn toggle close-menustyle">Fechar</a>
+		</div>
+
+	</nav>
+	<div class="content-holder"  id="content">
 		<div class="navbar">
 			<div class="logo-button-holder">
 				<div class="container">
@@ -39,20 +56,7 @@
 
 			</div>
 
-			<nav id="sidebar-wrapper" class="hidden">
-				<div class="sidebar-wrapper-content ">
-					<a id="menu-close" href="#" class="close-btn toggle"><i class="ion-ios-close-empty"></i></a>
-						<ul class="sidebar-nav">
-							<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						</ul>
-				</div>
 
-			</nav>
 
 			<div class="main-navbar">
 				<section class="container">
@@ -144,9 +148,9 @@
 
 		</div>
 
-		<div class="navdrop nav-mobile  hidden-md hidden-lg">
+		<div class="navdrop nav-mobile  hidden-md hidden-lg" data-slideout-ignore>
 			<span class="fa fa-angle-left nav-mobile-button" data-id="left"></span>
-			<div class="container nav-items-mobile">
+			<div class="container nav-items-mobile" data-slideout-ignore>
 				<div class="nav-items-mobile">
 					<div class="nav-item">
 						<img alt="Pc Gamer" src="assets/img/pc.svg">
@@ -199,73 +203,110 @@
 				<span class="product-name">Nome do Produto</span>
 			</div>
 		</div>
-		<div class="search-results-holder hidden">
-			<div class="search-results hidden">
+		<div class="body-holder" style="background-color:;">
+			<div id="preloader"></div>
 
-			</div>
-		</div>
+			<div class="search-results-holder hidden">
+				<div class="search-results hidden">
 
-
-		<section id="main-content">
-			<div class="main-banner">
-				<div class="container">
-					<img src="assets/img/banner.png" alt="" class="img-banner">
 				</div>
 			</div>
 
-			<section class="container">
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-				<div id="pricelowered">Preço</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-				<br><br><br><br><br><br><br>
+
+			<section id="main-content">
+				<div class="main-banner">
+					<div class="container">
+						<img src="assets/img/banner.png" alt="" class="img-banner">
+					</div>
+				</div>
+
+				<section class="home-content-holder container">
+					<div class="setup-holder">
+
+					</div>
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br>
 
 
+				</section>
+				<div id="footer">
+				<section class="container">
+					<div class="col-md-4">
+						<div class="footer-addresses-holder">
+							<p class="footer-content"><span class="fa fa-shopping-bag"></span> Nossas Unidades</p>
+
+	 					 <div class="footer-addresses col-md-offset-5 col-sn-offset-4 col-xs-offset-4">
+							 <span class="fa fa-map-marker" data-location="SP"></span>
+							 <span class="location-content">
+								 Av. Fagundes Filho, 191
+								 Próx. ao metrô São Judas - São Paulo, SP
+								 Seg. à sex. 9h - 18h. Sáb. 10h - 15h
+							 </span>
+
+	 					 </div>
+						 <div class="footer-addresses col-md-offset-5 col-sn-offset-4 col-xs-offset-4">
+							 <span class="fa fa-map-marker" data-location="CT"></span>
+							 <span class="location-content">
+								 Av. Fagundes Filho, 191
+								 Próx. ao metrô São Judas - São Paulo, SP
+								 Seg. à sex. 9h - 18h. Sáb. 10h - 15h
+							 </span>
+
+	 					 </div>
+						</div>
+
+						</div>
+						<div class="col-md-4 socialshow">
+						<p class="footer-content social-adjust"><span class="fa fa-star"></span> Social</p>
+							<div class="col-md-6 social-items"><div> <span class="fa fa-facebook-official soc-icons"></span> <span>Facebook </span></div></div>
+							<div class="col-md-6 social-items"><div><span class="fa fa-instagram soc-icons"></span><span> Instagram</span> </div></div>
+							<div class="col-md-6 social-items"><div><span class="fa fa-twitter soc-icons"></span><span> Twitter</span> </div></div>
+							<div class="col-md-6 social-items"><div><span class="fa fa-twitch soc-icons"></span><span>Twitch </span> </div></div>
+							<div class="col-md-6 social-items"><div><span class="fa fa-youtube soc-icons"></span><span> Youtube</span> </div></div>
+							<div class="col-md-6 social-items"><div><span class="fa fa-linkedin soc-icons"></span><span> LinkedIn</span> </div></div>
+						</div>
+						<div class="col-md-4" align="center">
+						<p class="footer-content"><span class="fa fa-credit-card-alt"></span> Pagamento</p>
+						<img src="assets/img/infopayment.png" width="100%">
+						</div>
+						<div class="col-md-4">
+						<p class="footer-content"><span class="fa fa-envelope-o"></span> Newsletter</p>
+						<p class="newsletter-content">Se inscreva e receba ofertas exclusivas</p>
+						<div class="newsletter-holder">
+									<input type="text" name="" value="" class="newsletter-input">
+								</div>
+						</div>
+						<div class="col-md-8 linksshow">
+						<p class="footer-content"><span class="fa fa-link"></span> Links</p>
+							<div class="col-md-4 links-content"><div><span class="fa fa-building-o soc-icons"></span><span class="links-label"> Sobre a Rocketz</span></div> </div>
+							<div class="col-md-4 links-content"><div><span class="fa fa-eye-slash soc-icons"></span> <span class="links-label"> Políticas de privacidade</span></div> </div>
+							<div class="col-md-4 links-content"><div><span class="fa fa-truck soc-icons"></span> <span class="links-label"> Frete e envio</span></div> </div>
+							<div class="col-md-4 links-content"><div><span class="fa fa-cogs soc-icons"></span> <span class="links-label">Trabalhe conosco </span></div> </div>
+							<div class="col-md-4 links-content"><div><span class="fa fa-exchange soc-icons"></span> <span class="links-label">Trocas e devolução </span></div> </div>
+							<div class="col-md-4 links-content"><div><span class="fa fa-envelope soc-icons"></span><span class="links-label"> Entre em contato</span> </div> </div>
+						</div>
+						<div class="col-md-4">
+						<p class="footer-content"><span class="fa fa-lock"></span> Segurança</p>
+							<div class="col-md-6"><img class="img-footer" src="assets/img/comodo.png"></div>
+							<div class="col-md-6"><img class="img-footer" src="assets/img/ssl.png"></div>
+						</div>
+					<div class="col-md-12"><p class="footer-ending"><b>Rocketz</b> é uma marca da Rocketz Intermediação LTDA - CNPJ 21.073.174/0001-54 - Rua Monsenhor Celso, 243 - CJ 9 - Centro - Curitiba, PR</p></div>
+						</section>
+				</div>
 			</section>
-			<div id="footer">
-			<section class="container">
-				<div class="col-md-4">
-					<div class="footer-addresses-holder">
-						<p class="footer-content"><span class="fa fa-shopping-bag"></span> Nossas Unidades</p>
+		</div>
+		<div class="cart-mobile-holder hidden-md hidden-lg animated bounceInUp">
+			<div class="cart-mobile-info-holder">
 
- 					 <div class="footer-addresses col-md-offset-5 col-sn-offset-4 col-xs-offset-4">
-						 <span class="fa fa-map-marker" data-location="SP"></span>
-						 <span class="location-content">
-							 Av. Fagundes Filho, 191
-							 Próx. ao metrô São Judas - São Paulo, SP
-							 Seg. à sex. 9h - 18h. Sáb. 10h - 15h
-						 </span>
-
- 					 </div>
-					 <div class="footer-addresses col-md-offset-5 col-sn-offset-4 col-xs-offset-4">
-						 <span class="fa fa-map-marker" data-location="CT"></span>
-						 <span class="location-content">
-							 Av. Fagundes Filho, 191
-							 Próx. ao metrô São Judas - São Paulo, SP
-							 Seg. à sex. 9h - 18h. Sáb. 10h - 15h
-						 </span>
-
- 					 </div>
-					</div>
-
-					</div>
-					<div class="col-md-2">
-					<p class="footer-content"><span class="fa fa-star"></span> Social</p>
-					</div>
-					<div class="col-md-6">
-					<p class="footer-content"><span class="fa fa-credit-card-alt"></span> Pagamento</p>
-					</div>
-					</section>
 			</div>
-		</section>
-	</div>
-	<div class="cart-mobile-holder hidden-md hidden-lg animated bounceInUp">
-		<div class="cart-mobile-info-holder">
+			<div class="cart-mobile-icon-holder">
+				<span class="fa fa-shopping-cart"></span>
+			</div>
+
 
 		</div>
-		<div class="cart-mobile-icon-holder">
-			<span class="fa fa-shopping-cart"></span>
-		</div>
-
 
 	</div>
 
@@ -278,9 +319,10 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/owl.carousel.js"></script>
+	<script src="assets/js/slideout.js"></script>
 	<script src="assets/js/script.js"></script>
 	<script type="text/javascript">
-					 isAssistBarActive=true;
+					 isAssistBarActive=false;
 
 	</script>
 </body>
