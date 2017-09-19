@@ -9,6 +9,7 @@
 		<meta http-equiv="cleartype" content="on">
     <meta name="MobileOptimized" content="320">
     <meta name="HandheldFriendly" content="True">
+		<meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
@@ -34,15 +35,29 @@
 <body id="home" style="display:flex;">
 	<nav id="sidebar-wrapper" class="">
 		<div class="sidebar-wrapper-content">
+				<button type="button" class="account-button mobile"><span class="fa fa-user"></span><span>Minha Conta</span> </button>
+				<span class="sidebar-label"><span class="fa fa-link"></span>LINKS</span>
 				<ul class="sidebar-nav">
-					<li><a href="#" class="sidebar-text myaccount">Minha conta<span class="fa fa-user"></span></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
+					<!-- <li><a href="#" class="myaccount">Minha conta<span class="fa fa-user"></span></a></li> -->
+					<li><a href="#" class="sidebar-menutext">Sobre a Rocketz <span class="fa fa-angle-right"></span></a></li>
+					<li><a href="#" class="sidebar-menutext">Privacidade <span class="fa fa-angle-right"></span></a></li>
+					<li><a href="#" class="sidebar-menutext">Frete e envio <span class="fa fa-angle-right"></span></a></li>
+					<li><a href="#" class="sidebar-menutext">Trabalhe conosco <span class="fa fa-angle-right"></span></a></li>
+					<li><a href="#" class="sidebar-menutext">Trocas e devolução <span class="fa fa-angle-right"></span></a></li>
+					<li><a href="#" class="sidebar-menutext">Entre em contato <span class="fa fa-angle-right"></span></a></li>
 				</ul>
-				<a id="menu-close" href="#" class="close-btn toggle close-menustyle">Fechar</a>
+				<span class="sidebar-label"><span class="fa fa-star"></span>SOCIAL</span>
+				<div class="container social-wrap">
+				<a href="#" class="col-xs-2 social-mobile"><span class="fa fa-facebook-official"></span></a>
+				<a href="#" class="col-xs-2 social-mobile"><span class="fa fa-instagram"></span></a>
+				<a href="#" class="col-xs-2 social-mobile"><span class="fa fa-twitter"></span></a>
+				<a href="#" class="col-xs-2 social-mobile"><span class="fa fa-twitch"></span></a>
+				<a href="#" class="col-xs-2 social-mobile"><span class="fa fa-youtube"></span></a>
+				<a href="#" class="col-xs-2 social-mobile"><span class="fa fa-linkedin"></span></a>
+				</div>
+
+				<a id="menu-close" href="#" class="close-btn toggle close-menustyle"><span>FECHAR</span></a>
+
 		</div>
 
 	</nav>
@@ -63,7 +78,7 @@
 					<section class="row">
 						<div class="main-navbar-items left hidden-xs hidden-sm">
 							<object  data="assets/img/logo_full.svg" alt="" class="logo-full"></object>
-							<div class="search-holder">
+							<div class="search-holder ">
 								<input type="text" name="" value="" class="search-input">
 							</div>
 							<div class="social-holder left">
@@ -71,20 +86,23 @@
 								<span class="fa fa-twitter"></span>
 							</div>
 						</div>
-						<div class="main-navbar-items rigth hidden-xs hidden-sm">
-							<div class="social-holder right">
+						<div class="main-navbar-items rigth ">
+							<div class="social-holder right hidden-xs hidden-sm">
 								<span class="fa fa-youtube"></span>
 								<span class="fa fa-instagram"></span>
 							</div>
-							<div class="account-buttons-holder">
+							<div class="account-buttons-holder hidden-xs hidden-sm">
 								<!-- <button type="button" class="account-button"><span class="fa fa-cubes"></span><span> Meu Setup</span></button> -->
 								<button type="button" class="account-button"><span class="fa fa-user"></span><span>Minha Conta</span> </button>
+							</div>
+							<div class="search-holder-mobile hidden-md hidden-lg">
+								<span class="fa fa-search"></span>
 							</div>
 							<div class="cart-holder">
 								<span class="fa fa-shopping-cart"></span>
 							</div>
 						</div>
-						<a id="menu-toggle" href="#" class="col-xs-12 toggle wow rotateIn menushow" data-wow-delay="0.5s"><i class="ion-navicon"></i></a>
+							<div id="menu-toggle" href="#" class="col-xs-12 toggle wow rotateIn menushow" data-wow-delay="0.5s"><i class="fa fa-bars" aria-hidden="true"></i></div>
 					</section>
 				</section>
 			</div>
@@ -207,7 +225,7 @@
 			<div id="preloader"></div>
 
 			<div class="search-results-holder hidden">
-				<div class="search-results hidden">
+				<div class="search-results empty">
 
 				</div>
 			</div>
@@ -260,12 +278,17 @@
 						</div>
 						<div class="col-md-4 socialshow">
 						<p class="footer-content social-adjust"><span class="fa fa-star"></span> Social</p>
-							<div class="col-md-6 social-items"><div> <span class="fa fa-facebook-official soc-icons"></span> <span>Facebook </span></div></div>
-							<div class="col-md-6 social-items"><div><span class="fa fa-instagram soc-icons"></span><span> Instagram</span> </div></div>
-							<div class="col-md-6 social-items"><div><span class="fa fa-twitter soc-icons"></span><span> Twitter</span> </div></div>
-							<div class="col-md-6 social-items"><div><span class="fa fa-twitch soc-icons"></span><span>Twitch </span> </div></div>
-							<div class="col-md-6 social-items"><div><span class="fa fa-youtube soc-icons"></span><span> Youtube</span> </div></div>
-							<div class="col-md-6 social-items"><div><span class="fa fa-linkedin soc-icons"></span><span> LinkedIn</span> </div></div>
+						<div class="social-footer-holder">
+							<div class="">
+								<div><span class="fa fa-facebook-official soc-icons"></span> <span>Facebook </span></div>
+								<div><span class="fa fa-instagram soc-icons"></span><span> Instagram</span> </div>
+								<div><span class="fa fa-twitter soc-icons"></span><span> Twitter</span> </div>
+								<div><span class="fa fa-twitch soc-icons"></span><span>Twitch </span> </div>
+								<div><span class="fa fa-youtube soc-icons"></span><span> Youtube</span> </div>
+								<div><span class="fa fa-linkedin soc-icons"></span><span> LinkedIn</span> </div>
+							</div>
+						</div>
+
 						</div>
 						<div class="col-md-4" align="center">
 						<p class="footer-content"><span class="fa fa-credit-card-alt"></span> Pagamento</p>
@@ -289,15 +312,15 @@
 						</div>
 						<div class="col-md-4">
 						<p class="footer-content"><span class="fa fa-lock"></span> Segurança</p>
-							<div class="col-md-6"><img class="img-footer" src="assets/img/comodo.png"></div>
-							<div class="col-md-6"><img class="img-footer" src="assets/img/ssl.png"></div>
+							<div class="col-xs-6"><img class="img-footer" src="assets/img/comodo.png"></div>
+							<div class="col-xs-6"><img class="img-footer" src="assets/img/ssl.png"></div>
 						</div>
 					<div class="col-md-12"><p class="footer-ending"><b>Rocketz</b> é uma marca da Rocketz Intermediação LTDA - CNPJ 21.073.174/0001-54 - Rua Monsenhor Celso, 243 - CJ 9 - Centro - Curitiba, PR</p></div>
 						</section>
 				</div>
 			</section>
 		</div>
-		<div class="cart-mobile-holder hidden-md hidden-lg animated bounceInUp">
+		<div class="cart-mobile-holder hidden-md hidden-lg animated bounceInUp hidden">
 			<div class="cart-mobile-info-holder">
 
 			</div>

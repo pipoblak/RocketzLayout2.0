@@ -16,7 +16,7 @@ $(window).load(function(){
     'menu': document.getElementById('sidebar-wrapper'),
     'padding': 256,
     'tolerance': 70,
-    'side': 'right'
+    'side': 'left'
   });
   sidewrapper.on('beforeopen', function() {
     this.panel.classList.add('content-open');
@@ -110,7 +110,7 @@ $(".body-holder").scroll(function(event){
       }
 
   }
-  if (scroll >= 1){
+  if (scroll >= 10){
     isCategoriesMenuOnTop=false;
     if(isCategoriesShowing){
       toggleCategoriesNav();
