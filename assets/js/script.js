@@ -137,3 +137,55 @@ $(document).on("click",".nav-mobile-button",function(event){
   else
     target.scrollLeft(target.scrollLeft()- 56);
 });
+
+//search
+$(".search-input").on("keyup",function(event){
+  var term = $(this).val();
+  var length = $(this).val().length;
+  var searchResultsHolder=$(".search-results-holder");
+  var searchResults=$(".search-results");
+  var closeSearch=$(".close-search");
+  var searchTerm=$(".search-term");
+  var resultsNotFound=$(".results-not-found");
+  var results=0;
+  searchTerm.text('"'+term+'"');
+  if(length>0){
+    searchResultsHolder.removeClass("hidden");
+  }
+  else{
+    if(!searchResultsHolder.hasClass("hidden"))
+      searchResultsHolder.addClass("hidden");
+  }
+  if(length>=2){
+    searchResultsHolder.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(e) {
+      if($(".search-input").val().length>=2){
+        searchResults.removeClass("empty");
+      }
+
+    });
+
+    closeSearch.addClass("inverted");
+    if(term.toLowerCase()=="mouse"){
+      if(!resultsNotFound.hasClass("hidden"))
+        resultsNotFound.addClass("hidden");
+    }
+    else{
+      resultsNotFound.removeClass("hidden");
+    }
+  }
+  else{
+    if(!searchResults.hasClass("empty")){
+      closeSearch.removeClass("inverted");
+      searchResults.addClass("empty");
+    }
+  }
+});
+
+$(".close-search").on("click",function(event){
+  var searchResultsHolder=$(".search-results-holder");
+  var searchResults=$(".search-results");
+  $(this).removeClass("inverted");
+  searchResults.addClass("empty");
+  searchResultsHolder.addClass("hidden");
+
+});
