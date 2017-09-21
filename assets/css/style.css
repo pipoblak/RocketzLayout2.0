@@ -38,8 +38,7 @@ body{
       min-height: 500px;
     }
     .fixed2 {
-      width: 50px !important;
-      height: 50px!important;
+      transform: scale(0.8);
       top:8px !important;
     }
 }
@@ -53,8 +52,7 @@ body{
       top: 30px !important;
     }
     .fixed2{
-      width: 46px !important;
-      height: 46px !important;
+      transform: scale(0.8);
       top:14px !important;
     }
     .cart-holder{
@@ -590,11 +588,11 @@ body{
 }
 .cart-holder:hover{
   color: #ccc;
+  cursor: pointer;
 }
 .cart-holder>span{
   margin: auto;
   position: relative;
-  cursor: pointer;
 }
 .cart-holder>span::after{
   content: "1";
@@ -650,6 +648,7 @@ body{
   background: url("/assets/img/logo.svg");
   background-repeat: no-repeat;
   display: block;
+  transition: all 0.2s;
 }
 .logo:hover::before{
   transform: scale(1.05);
@@ -694,7 +693,7 @@ body{
 .navlift>span{
   opacity: 0;
 }
-.navlift>.nav-items>div>div{
+.navlift>.nav-items>div>div>*{
   opacity: 0;
   transition-delay: 0s !important;
 }
@@ -754,6 +753,9 @@ body{
   justify-content: center;
   align-content: center;
 	transition: all 0.25s;
+}
+.nav-item>*{
+  transition: all 0.25s;
   transition-delay: 0.1s;
 }
 
