@@ -1224,7 +1224,13 @@ body{
 .setup-pc-box>img{
   width: 80%;
   margin: auto;
-  transition: all 1s;
+  transition: all 0.5s;
+  image-rendering: optimizeSpeed;             /*                     */
+  image-rendering: -moz-crisp-edges;          /* Firefox             */
+  image-rendering: -o-crisp-edges;            /* Opera               */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed       */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                */
 }
 .pc-box-title{
   margin-top:16px;
@@ -1321,7 +1327,13 @@ body{
   max-width: 90%;
   max-height: 90%;
   margin: auto;
-  transition: all 1s;
+  transition: all 0.5s;
+  image-rendering: optimizeSpeed;             /*                     */
+  image-rendering: -moz-crisp-edges;          /* Firefox             */
+  image-rendering: -o-crisp-edges;            /* Opera               */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed       */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                */
 }
 .setup-product-box-price-holder{
   display: flex;
