@@ -82,9 +82,6 @@ body{
 
 }
 @media only screen and (max-width: 768px) {
-  .setup-holder-products{
-    flex-direction: column !important;
-  }
 
 }
 
@@ -118,7 +115,17 @@ body{
   .main-banner{
     height: 25% !important;
   }
+
 }
+@media only screen and (max-width: 360px) {
+  .setup-holder-pc{
+    min-width: 80% !important;
+  }
+  .setup-holder-products>div{
+    min-width: 100% !important;
+  }
+}
+
 @media only screen and (max-width:765px) {
   .setup-pc-box>.pc-box-hover>span{
     margin: auto auto 15% auto;
@@ -127,8 +134,7 @@ body{
 @media only screen and (max-width: 991px) {
   .social-items{
     text-align: center;
-	float: inherit;
-
+    float: inherit;
   }
 }
 
@@ -343,6 +349,9 @@ body{
   margin: auto;
   margin-right: 16px;
 }
+.search-holder-mobile:hover>span{
+  color:#ccc;
+}
 .search-holder-mobile>span{
   display: flex;
   color: white;
@@ -356,7 +365,7 @@ body{
   right: 16px;
   top:16px;
   z-index: 2;
-  transition: all 0.2s;
+  transition: all 0.5s;
 }
 .close-search.inverted{
   color: #252525;
@@ -364,7 +373,12 @@ body{
 .close-search:hover{
   cursor: pointer;
   color: #ccc;
-
+}
+.search-results-holder.hidden>.close-search{
+  visibility: hidden;
+}
+.search-results-holder.hidden>.search-input-mobile{
+  transform: translateY(48px);
 }
 .search-holder{
   position: relative;
@@ -384,6 +398,42 @@ body{
   right: 16px;
   color:#656565;
   font-size:16px;
+}
+.search-input-mobile{
+  background: #252525;
+  display:flex;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  height: 48px;
+  width: 100%;
+  transition: all 0.5s;
+  transform: translateY(0px);
+}
+.search-input-mobile>.search-holder{
+  width: 100%;
+  background: transparent;
+  margin:0;
+  height: 48px;
+}
+.search-input-mobile>.search-holder::before{
+  content:"";
+}
+.search-input-mobile>.search-holder>input{
+  margin: auto;
+  background: transparent;
+  border:none;
+  border-bottom: solid 1px white;
+  width:70%;
+  border-radius: 0;
+  color: white;
+  height: 32px;
+  font-family: "Saira";
+  text-align: center;
+  font-size: 12px;
+}
+.search-input-mobile-input:focus{
+  outline: none;
 }
 .search-input{
   height: 32px;
@@ -756,6 +806,7 @@ body{
 }
 .main-banner{
   height: 40%;
+  max-height: 500px;
   display: flex;
   background: #2ecc71;
   -moz-box-shadow:    inset 0 0 40px rgba(0, 0, 0, 0.3);
@@ -838,6 +889,9 @@ body{
 	font-size: 18px;
 	font-weight: 200;
 
+}
+.linksshow>.footer-content{
+  padding-top:0;
 }
 .footer-content > .fa{
   padding: 8px;
@@ -1001,14 +1055,15 @@ body{
 	color: #888888;
 	font-size: 12px;
 	padding-top: 10px;
-	margin-left: 10%;
 
 }
 .img-footer{
   width: 100%;
   padding: 16px;
 }
-
+.copyright-footer{
+  clear: both;
+}
 .close-menustyle {
 	font-family: "Saira";
 	font-weight: 500;
@@ -1082,10 +1137,14 @@ body{
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 510px;
 }
 .setup-holder-pc{
   width: 30%;
   display: flex;
+  min-width: 330px;
+  margin: auto;
 }
 .setup-holder-pc>div{
   margin:0 auto;
@@ -1096,9 +1155,12 @@ body{
   flex-wrap: wrap;
   align-content: space-between;
   min-width: 70%;
+  margin: 0 auto;
 }
 .setup-holder-products>div{
   margin: auto;
+  min-width: 310px;
+  width: 50%;
 }
 .setup-pc-box{
   height: 510px;
@@ -1155,7 +1217,7 @@ body{
   margin: auto auto 20% auto;
 }
 .setup-pc-box:hover>img{
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 .setup-pc-box>img{
   width: 80%;
@@ -1206,7 +1268,7 @@ body{
   transition: all 0.2s;
 }
 .setup-product-box:hover>.setup-product-box-top>.setup-product-box-img-holder>img{
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 .setup-product-box:hover{
   cursor: pointer;
@@ -1284,6 +1346,7 @@ body{
   margin: 0 auto;
   padding-top: 8px;
   padding-left: 16px;
+  text-align: center;
 }
 .price-style {
 	text-align: center;
@@ -1335,29 +1398,4 @@ body{
 
 .row-adjust {
 	padding-top: 90px;
-}
-
-.progress
-{
- position: fixed;
- left: 0px;
- top: 0px;
- width: 100%;
- height: 50px;
- z-index: 9999;
- background-color: transparent;
-}
-.bar
-{
-  background-color: #FFFFFF;
-  width:0%;
-  height:5px;
-  border-radius: 3px;
-}
-.percent
-{
-  position:absolute;
-  display:inline-block;
-  top:3px;
-  left:48%;
 }

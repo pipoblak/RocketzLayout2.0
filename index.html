@@ -12,12 +12,14 @@
 		<meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <script src="assets/js/nprogress.js"></script>
 
 	<!-- css -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/ionicons.min.css">
+	<link href="assets/css/nprogress.css" rel="stylesheet" />
 
 	<!-- fonts -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -31,6 +33,7 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor<a href="http://browsehappy.com/"> atualize o seu navegador</a> para melhorar a sua experiência.</p>
     <![endif]-->
+    <script>if(location.hostname.match(/ricostacruz\.com$/)){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()}</script>
 </head>
 <body id="home" style="display:flex;">
 	<nav id="sidebar-wrapper" class="">
@@ -226,10 +229,12 @@
 
 			<div class="search-results-holder hidden">
 				<span class="fa fa-close close-search"></span>
-				<div class="search-results empty">
-					<div class="search-input-mobile hidden-md hidden-lg">
-
+				<div class="search-input-mobile hidden-md hidden-lg">
+					<div class="search-holder ">
+						<input focusable="true" type="text" name="" value="" class="search-input-mobile-input">
 					</div>
+				</div>
+				<div class="search-results empty">
 					<div class="search-holder-title-holder">
 						<span class="search-results-title"><span class="fa fa-search"></span> <span>Resultados da Pesquisa </span></span>
 					</div>
@@ -270,7 +275,7 @@
 										<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 809,46</d></div>
 									</div>
 									<div class="pc-box-hover noselect" >
-										<span><span>CONFERIR</span> <span class="fa fa-caret-right"></span></span>
+										<span class=""><span>CONFERIR</span> <span class="fa fa-caret-right"></span></span>
 									</div>
 								</div>
 							</div>
@@ -343,7 +348,7 @@
 								</div>
 							</div>
 							<div class=" animated fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
-								<div class="setup-product-box">
+								<div class="setup-product-box animated">
 									<div class="setup-product-box-top">
 										<div class="setup-product-box-title-holder">
 											<span class="setup-product-box-category">MONITOR GAMER</span>
@@ -367,6 +372,7 @@
 						</div>
 
 					</div>
+
 				</section>
 				<div id="footer">
 				<section class="container">
@@ -410,18 +416,23 @@
 
 						</div>
 						<div class="col-md-4" align="center">
-						<p class="footer-content"><span class="fa fa-credit-card-alt"></span> Pagamento</p>
-						<img src="assets/img/infopayment.png" width="100%">
+							<p class="footer-content"><span class="fa fa-credit-card-alt"></span> Pagamento</p>
+							<img src="assets/img/infopayment.png" width="100%">
 						</div>
 						<div class="col-md-4">
-						<p class="footer-content"><span class="fa fa-envelope-o"></span> Newsletter</p>
-						<p class="newsletter-content">Se inscreva e receba ofertas exclusivas</p>
-						<div class="newsletter-holder">
-									<input type="text" name="" value="" class="newsletter-input">
-								</div>
+							<p class="footer-content"><span class="fa fa-lock"></span> Segurança</p>
+							<div class="col-xs-6"><img class="img-footer" src="assets/img/comodo.png"></div>
+							<div class="col-xs-6"><img class="img-footer" src="assets/img/ssl.png"></div>
 						</div>
-						<div class="col-md-8 linksshow">
-						<p class="footer-content"><span class="fa fa-link"></span> Links</p>
+						<!-- <div class="col-md-4">
+							<p class="footer-content"><span class="fa fa-envelope-o"></span> Newsletter</p>
+							<p class="newsletter-content">Se inscreva e receba ofertas exclusivas</p>
+							<div class="newsletter-holder">
+										<input type="text" name="" value="" class="newsletter-input">
+							</div>
+						</div> -->
+						<div class="col-md-12 linksshow">
+							<p class="footer-content"><span class="fa fa-link"></span> Links</p>
 							<div class="links-holder">
 								<div><span class="fa fa-building-o soc-icons"></span><span class="links-label"> Sobre a Rocketz</span></div>
 								<div><span class="fa fa-eye-slash soc-icons"></span> <span class="links-label"> Políticas de privacidade</span></div>
@@ -431,12 +442,8 @@
 								<div><span class="fa fa-envelope soc-icons"></span><span class="links-label"> Entre em contato</span> </div>
 							</div>
 						</div>
-						<div class="col-md-4">
-						<p class="footer-content"><span class="fa fa-lock"></span> Segurança</p>
-							<div class="col-xs-6"><img class="img-footer" src="assets/img/comodo.png"></div>
-							<div class="col-xs-6"><img class="img-footer" src="assets/img/ssl.png"></div>
-						</div>
-					<div class="col-md-12"><p class="footer-ending"><b>Rocketz</b> é uma marca da Rocketz Intermediação LTDA - CNPJ 21.073.174/0001-54 - Rua Monsenhor Celso, 243 - CJ 9 - Centro - Curitiba, PR</p></div>
+
+						<div class="col-md-12 copyright-footer"><p class="footer-ending"><b>Rocketz</b> é uma marca da Rocketz Intermediação LTDA - CNPJ 21.073.174/0001-54 - Rua Monsenhor Celso, 243 - CJ 9 - Centro - Curitiba, PR</p></div>
 						</section>
 				</div>
 			</section>
@@ -457,8 +464,6 @@
 
 
 
-
-
 	<script src="assets/js/jquery-2.1.3.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
@@ -469,5 +474,18 @@
 					 isAssistBarActive=false;
 
 	</script>
+	<script>
+    $('body').show();
+    $('.version').text(NProgress.version);
+    NProgress.start();
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
+
+    $("#b-0").click(function() { NProgress.start(); });
+    $("#b-40").click(function() { NProgress.set(0.4); });
+    $("#b-inc").click(function() { NProgress.inc(); });
+    $("#b-100").click(function() { NProgress.done(); });
+  </script>
+
+  <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
 </body>
 </html>
