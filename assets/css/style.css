@@ -693,6 +693,9 @@ body{
 .navlift>span{
   opacity: 0;
 }
+.navlift>.nav-items>div>div{
+  visibility: hidden;
+}
 .navlift>.nav-items>div>div>*{
   opacity: 0;
   transition-delay: 0s !important;

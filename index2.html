@@ -20,6 +20,23 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/ionicons.min.css">
 	<link href="assets/css/nprogress.css" rel="stylesheet" />
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 	<!-- fonts -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -33,7 +50,7 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor<a href="http://browsehappy.com/"> atualize o seu navegador</a> para melhorar a sua experiência.</p>
     <![endif]-->
-     <script>if(location.hostname.match(/ricostacruz\.com$/)){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()}</script>
+    <script>if(location.hostname.match(/ricostacruz\.com$/)){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()}</script>
 </head>
 <body id="home" style="display:flex;">
 	<nav id="sidebar-wrapper" class="">
@@ -228,9 +245,29 @@
 			<div id="preloader"></div>
 
 			<div class="search-results-holder hidden">
-				<div class="search-results empty">
-
+				<span class="fa fa-close close-search"></span>
+				<div class="search-input-mobile hidden-md hidden-lg">
+					<div class="search-holder ">
+						<input focusable="true" type="text" name="" value="" class="search-input-mobile-input">
+					</div>
 				</div>
+				<div class="search-results empty">
+					<div class="search-holder-title-holder">
+						<span class="search-results-title"><span class="fa fa-search"></span> <span>Resultados da Pesquisa </span></span>
+					</div>
+					<div class="container">
+						<span class="search-term"></span>
+						<div class="results-holder">
+							<div class="results">
+
+							</div>
+							<div class="results-not-found hidden">
+								<span><span class="fa fa-frown-o"></span>Não foram encontrados resultados para sua busca...</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 
 
@@ -242,77 +279,118 @@
 				</div>
 
 				<section class="home-content-holder container">
-				<div class="setup-holder">
-				<section class="row">
-				<div class="col-sm-6 col-md-4 wow animated fadeInUp" data-wow-duration="0.8s">
-					<div class="setup-box">
-						<h2><img src="assets/img/fire.svg" height="12%" width="12%"> FIRESTORM</h2>
-						<img src="assets/img/firealpha.png" height="100%" width="100%">
-						<div class="row">
-						<div class="col-md-6 price-style">À VISTA<br><div class="price-amount">R$ 8.547,94</div></div>
-						<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 809,46</d></div>
+					<div class="setup-holder">
+						<div class="setup-holder-pc">
+							<div class="animated fadeInUp" data-wow-duration="0.8s">
+								<div class="setup-pc-box" >
+									<div class="pc-box-title">
+										<span><img src="assets/img/fire.svg"> FIRESTORM</span>
+									</div>
+									<img src="assets/img/firealpha.png">
+									<div class="pc-box-price">
+										<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 8.547,94</span></div></div>
+										<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 809,46</d></div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span class=""><span>CONFERIR</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="setup-holder-products">
+							<div class="animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="0.8s">
+								<div class="setup-product-box">
+									<div class="setup-product-box-top">
+										<div class="setup-product-box-title-holder">
+											<span class="setup-product-box-category">MOUSE GAMER</span>
+											<span class="setup-product-box-title">MAMBA TOURNAMENT</span>
+										</div>
+										<div class="setup-product-box-img-holder">
+											<img src="assets/img/mamba.png">
+										</div>
+									</div>
+									<div class="setup-product-box-bottom">
+										<div class="setup-product-box-price-holder">
+											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 598,40</span></div></div>
+											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 56,67</d></div>
+										</div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span><span>IR PARA O PRODUTO</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
+							<div class="animated fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+								<div class="setup-product-box">
+									<div class="setup-product-box-top">
+										<div class="setup-product-box-title-holder">
+											<span class="setup-product-box-category">HEADSET GAMER</span>
+											<span class="setup-product-box-title">ARTEMIS G933</span>
+										</div>
+										<div class="setup-product-box-img-holder">
+											<img src="assets/img/artemis.png">
+										</div>
+									</div>
+									<div class="setup-product-box-bottom">
+										<div class="setup-product-box-price-holder">
+											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 958,32</span></div></div>
+											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 90,75</d></div>
+										</div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span><span>IR PARA O PRODUTO</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
+							<div class="animated fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.8s">
+								<div class="setup-product-box">
+									<div class="setup-product-box-top">
+										<div class="setup-product-box-title-holder">
+											<span class="setup-product-box-category">TECLADO GAMER</span>
+											<span class="setup-product-box-title">PRODIGY G810</span>
+										</div>
+
+										<div class="setup-product-box-img-holder">
+											<img src="assets/img/g810.png">
+										</div>
+									</div>
+									<div class="setup-product-box-bottom">
+										<div class="setup-product-box-price-holder">
+											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 755,32</span></div></div>
+											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 51,75</d></div>
+										</div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span><span>IR PARA O PRODUTO</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
+							<div class=" animated fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
+								<div class="setup-product-box animated">
+									<div class="setup-product-box-top">
+										<div class="setup-product-box-title-holder">
+											<span class="setup-product-box-category">MONITOR GAMER</span>
+											<span class="setup-product-box-title">ZOWIE 27"</span>
+										</div>
+										<div class="setup-product-box-img-holder">
+											<img src="assets/img/zowie.png">
+										</div>
+									</div>
+									<div class="setup-product-box-bottom">
+										<div class="setup-product-box-price-holder">
+											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 2.038,61</span></div></div>
+											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 193,05</d></div>
+										</div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span><span>IR PARA O PRODUTO</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
 						</div>
 
+					</div>
 
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4 wow animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="0.8s">
-					<div class="setup-box">
-					<img src="assets/img/mamba.png" height="35%" width="35%" style="float: right;">
-						<div class="setup-products">
-						<h2>MOUSE GAMER</h2><z>MAMBA TOURNAMENT</z>
-						<div class="row row-adjust">
-						<div class="col-md-6 price-style">À VISTA<br><div class="price-amount">R$ 598,40</div></div>
-						<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 56,67</d></div>
-						</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4 wow animated fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
-					<div class="setup-box">
-						<img src="assets/img/artemis.png" height="40%" width="40%" style="float: right;">
-						<div class="setup-products">
-						<h2>HEADSET GAMER</h2><z>ARTEMIS G933</z>
-						<div class="row row-adjust">
-						<div class="col-md-6 price-style">À VISTA<br><div class="price-amount">R$ 958,32</div></div>
-						<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 90,75</d></div>
-						</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4 wow animated fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.8s">
-					<div class="setup-box">
-						<img src="assets/img/g810.png" height="50%" width="50%" style="float: right;">
-						<div class="setup-products">
-						<h2>TECLADO GAMER</h2><z>PRODIGY G810</z>
-						<div class="row row-adjust">
-						<div class="col-md-6 price-style">À VISTA<br><div class="price-amount">R$ 755,32</div></div>
-						<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 51,75</d></div>
-						</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4 wow animated fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
-					<div class="setup-box">
-						<img src="assets/img/zowie.png" height="40%" width="40%" style="float: right;">
-						<div class="setup-products">
-						<h2>MONITOR GAMER</h2><z>ZOWIE 27"</z>
-						<div class="row row-adjust">
-						<div class="col-md-6 price-style">À VISTA<br><div class="price-amount">R$ 2.038,61</div></div>
-						<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 193,05</d></div>
-						</div>
-						</div>
-					</div>
-				</div>
-
-			</section>
-					</div>
-					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-					<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-					<br><br><br><br><br><br><br>
-
-				<a href="index.html" value="0">jooj</a>
 				</section>
 				<div id="footer">
 				<section class="container">
@@ -356,31 +434,34 @@
 
 						</div>
 						<div class="col-md-4" align="center">
-						<p class="footer-content"><span class="fa fa-credit-card-alt"></span> Pagamento</p>
-						<img src="assets/img/infopayment.png" width="100%">
+							<p class="footer-content"><span class="fa fa-credit-card-alt"></span> Pagamento</p>
+							<img src="assets/img/infopayment.png" width="100%">
 						</div>
 						<div class="col-md-4">
-						<p class="footer-content"><span class="fa fa-envelope-o"></span> Newsletter</p>
-						<p class="newsletter-content">Se inscreva e receba ofertas exclusivas</p>
-						<div class="newsletter-holder">
-									<input type="text" name="" value="" class="newsletter-input">
-								</div>
-						</div>
-						<div class="col-md-8 linksshow">
-						<p class="footer-content"><span class="fa fa-link"></span> Links</p>
-							<div class="col-md-4 links-content"><div><span class="fa fa-building-o soc-icons"></span><span class="links-label"> Sobre a Rocketz</span></div> </div>
-							<div class="col-md-4 links-content"><div><span class="fa fa-eye-slash soc-icons"></span> <span class="links-label"> Políticas de privacidade</span></div> </div>
-							<div class="col-md-4 links-content"><div><span class="fa fa-truck soc-icons"></span> <span class="links-label"> Frete e envio</span></div> </div>
-							<div class="col-md-4 links-content"><div><span class="fa fa-cogs soc-icons"></span> <span class="links-label">Trabalhe conosco </span></div> </div>
-							<div class="col-md-4 links-content"><div><span class="fa fa-exchange soc-icons"></span> <span class="links-label">Trocas e devolução </span></div> </div>
-							<div class="col-md-4 links-content"><div><span class="fa fa-envelope soc-icons"></span><span class="links-label"> Entre em contato</span> </div> </div>
-						</div>
-						<div class="col-md-4">
-						<p class="footer-content"><span class="fa fa-lock"></span> Segurança</p>
+							<p class="footer-content"><span class="fa fa-lock"></span> Segurança</p>
 							<div class="col-xs-6"><img class="img-footer" src="assets/img/comodo.png"></div>
 							<div class="col-xs-6"><img class="img-footer" src="assets/img/ssl.png"></div>
 						</div>
-					<div class="col-md-12"><p class="footer-ending"><b>Rocketz</b> é uma marca da Rocketz Intermediação LTDA - CNPJ 21.073.174/0001-54 - Rua Monsenhor Celso, 243 - CJ 9 - Centro - Curitiba, PR</p></div>
+						<!-- <div class="col-md-4">
+							<p class="footer-content"><span class="fa fa-envelope-o"></span> Newsletter</p>
+							<p class="newsletter-content">Se inscreva e receba ofertas exclusivas</p>
+							<div class="newsletter-holder">
+										<input type="text" name="" value="" class="newsletter-input">
+							</div>
+						</div> -->
+						<div class="col-md-12 linksshow">
+							<p class="footer-content"><span class="fa fa-link"></span> Links</p>
+							<div class="links-holder">
+								<div><span class="fa fa-building-o soc-icons"></span><span class="links-label"> Sobre a Rocketz</span></div>
+								<div><span class="fa fa-eye-slash soc-icons"></span> <span class="links-label"> Políticas de privacidade</span></div>
+								<div><span class="fa fa-truck soc-icons"></span> <span class="links-label"> Frete e envio</span></div>
+								<div><span class="fa fa-cogs soc-icons"></span> <span class="links-label">Trabalhe conosco </span></div>
+								<div><span class="fa fa-exchange soc-icons"></span> <span class="links-label">Trocas e devolução </span></div>
+								<div><span class="fa fa-envelope soc-icons"></span><span class="links-label"> Entre em contato</span> </div>
+							</div>
+						</div>
+
+						<div class="col-md-12 copyright-footer"><p class="footer-ending"><b>Rocketz</b> é uma marca da Rocketz Intermediação LTDA - CNPJ 21.073.174/0001-54 - Rua Monsenhor Celso, 243 - CJ 9 - Centro - Curitiba, PR</p></div>
 						</section>
 				</div>
 			</section>
@@ -399,7 +480,9 @@
 	</div>
 
 
-	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+
+	<script src="assets/js/jquery-2.1.3.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/owl.carousel.js"></script>
