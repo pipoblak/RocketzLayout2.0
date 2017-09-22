@@ -453,12 +453,11 @@ body{
 }
 .search-input-mobile>.search-holder>input{
   margin: auto;
-  background: transparent;
+  background: white;
   border:none;
-  border-bottom: solid 1px white;
   width:70%;
-  border-radius: 0;
-  color: white;
+  border-radius: 3px;
+  color: #656565;
   height: 32px;
   font-family: "Saira";
   text-align: center;
@@ -1528,6 +1527,7 @@ margin: 0;
 .item{
 width: 100%;
 margin-bottom: 60px;
+marging-right: 30px;
         }
 .content-slider li{
 width: 260px !important;
@@ -1535,8 +1535,8 @@ text-align: center;
 text-shadow: -2px 1px 0px rgba(27, 27, 27, 1);
 color: #FFF;
 background-color:rgba(32,0,46,0.50);
-	margin-left: 90px;
-	}
+margin-left: 90px;
+}
 .content-slider h3 {
 margin: 0;
 padding: 70px 0;
@@ -1668,4 +1668,6 @@ padding: 70px 0;
 .content-menu-option-options-option-label>span{
   margin: auto 0;
   font-size: 12px;
+}
+.video-title {
 }
