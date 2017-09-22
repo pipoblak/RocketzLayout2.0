@@ -123,6 +123,12 @@ body{
   .setup-pc-box{
     height: 455px !important;
   }
+  .content-menu-option-options-option-logo{
+    margin-right: 8px !important;
+  }
+  .content-menu-option-options-option-logo>.fa{
+    font-size: 12px;
+  }
 }
 @media only screen and (max-width: 375px) {
   .main-banner{
@@ -137,6 +143,9 @@ body{
   }
   .content-menu-option>.fa{
     margin-right: 1px !important;
+  }
+  .content-menu-option-options-option-logo>.fa{
+    font-size: 10px;
   }
 }
 
@@ -1487,7 +1496,7 @@ body{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-height: 120px;
+  min-height: 50px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -1510,6 +1519,7 @@ padding-left: 0;
 margin: 0;
 		}
 .item{
+width: 100%;
 margin-bottom: 60px;
         }
 .content-slider li{
@@ -1578,7 +1588,7 @@ padding: 70px 0;
   top: 0;
   transition: all 0.2s;
   display: flex;
-  transform: translateY(-16px) scaleY(0);
+  transform: translateY(-16px) scaleY(0.5);
   visibility: hidden;
   border: solid 1px #ccc;
   border-top:none;
@@ -1587,6 +1597,21 @@ padding: 70px 0;
   z-index: 0;
   flex-direction: column;
   opacity: 0;
+}
+.content-menu-option-options-holder::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+.content-menu-option-options-holder::-webkit-scrollbar-thumb {
+  background-color: #dedede;
+}
+.content-menu-option-options-holder::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.content-menu-option-options-holder::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 .content-menu-option:hover>.content-menu-option-options-holder{
   transform: translateY(52px) scaleY(1) ;
