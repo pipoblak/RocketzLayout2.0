@@ -736,6 +736,9 @@ body{
 .navlift>.nav-items>div>a>div{
   visibility: hidden;
 }
+.navlift>.fa{
+  opacity: 0 !important;
+}
 .navlift>.nav-items>div>a>div>*{
   opacity: 0;
   transition-delay: 0s !important;
@@ -759,6 +762,10 @@ body{
   overflow-y: hidden;
   padding-right: 0px;
   padding-left: 0px;
+}
+.nav-mobile>.fa{
+  transition: all 0.3s;
+  opacity: 1;
 }
 .nav-items-mobile::-webkit-scrollbar {
     height: 0px;
@@ -1468,7 +1475,7 @@ body{
 
 .hre {
 	color: rgba(255,255,255,1.00);
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #ccc;
 	max-height: 30px;
 	width: 35%;
 	-webkit-touch-callout: none;
@@ -1482,7 +1489,7 @@ body{
 .rktz-title {
 	font-family: "Saira";
 	font-weight: 400;
-	color: #888888 !important;
+	color: #ccc !important;
 	margin-top: 10px;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -1523,10 +1530,12 @@ width: 100%;
 margin-bottom: 60px;
         }
 .content-slider li{
+width: 260px !important;
 text-align: center;
 text-shadow: -2px 1px 0px rgba(27, 27, 27, 1);
 color: #FFF;
 background-color:rgba(32,0,46,0.50);
+	margin-left: 90px;
 	}
 .content-slider h3 {
 margin: 0;

@@ -95,6 +95,7 @@ function toggleCategoriesNav(){
 var isCategoriesShowing=true;
 var isCategoriesMenuOnTop=true;
 var isAssistBarActive;
+var lastScroll=0;
 $(".body-holder").scroll(function(event){
   var scroll = $(event.target).scrollTop();
   if($("div[assist-bar-trigger=true]").length>=1){
@@ -113,18 +114,23 @@ $(".body-holder").scroll(function(event){
 
 
   }
-  if (scroll >= 10){
+
+  if ((scroll >= 10) && lastScroll<scroll){
     isCategoriesMenuOnTop=false;
     if(isCategoriesShowing){
       toggleCategoriesNav();
     }
   }
-  else if(scroll==0){
-    isCategoriesMenuOnTop=true;
-    toggleCategoriesNav();
+  else if(scroll==0 || scroll<lastScroll ){
+    if(!isCategoriesMenuOnTop){
+      toggleCategoriesNav();
+      isCategoriesMenuOnTop=true;
+    }
+
+
   }
 
-
+  lastScroll=scroll;
 });
 $(document).on("click",".logo",function(event){
   if(!isCategoriesMenuOnTop){
