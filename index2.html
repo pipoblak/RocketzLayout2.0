@@ -12,13 +12,16 @@
 		<meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <script src="assets/js/jquery-2.1.3.min.js"></script>
     <script src="assets/js/nprogress.js"></script>
+    <script src="assets/js/lightslider.js"></script>
 
 	<!-- css -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/ionicons.min.css">
+	<link rel="stylesheet" href="assets/css/lightslider.css">
 	<link href="assets/css/nprogress.css" rel="stylesheet" />
 	<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
@@ -50,15 +53,26 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor<a href="http://browsehappy.com/"> atualize o seu navegador</a> para melhorar a sua experiência.</p>
     <![endif]-->
+    <script>
+    	 $(document).ready(function() {
+			$("#content-slider").lightSlider({
+                loop:false,
+				auto:false,
+				pause:4000,
+                keyPress:true,
+				pager:false,
+            });
+            
+		});
+    </script>
     <script>if(location.hostname.match(/ricostacruz\.com$/)){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()}</script>
 </head>
 <body id="home" style="display:flex;">
-	<nav id="sidebar-wrapper" class="">
+<nav id="sidebar-wrapper" class="">
 		<div class="sidebar-wrapper-content">
 				<button type="button" class="account-button mobile"><span class="fa fa-user"></span><span>Minha Conta</span> </button>
 				<span class="sidebar-label"><span class="fa fa-link"></span>LINKS</span>
 				<ul class="sidebar-nav">
-					<!-- <li><a href="#" class="myaccount">Minha conta<span class="fa fa-user"></span></a></li> -->
 					<li><a href="#" class="sidebar-menutext">Sobre a Rocketz <span class="fa fa-angle-right"></span></a></li>
 					<li><a href="#" class="sidebar-menutext">Privacidade <span class="fa fa-angle-right"></span></a></li>
 					<li><a href="#" class="sidebar-menutext">Frete e envio <span class="fa fa-angle-right"></span></a></li>
@@ -97,7 +111,7 @@
 				<section class="container">
 					<section class="row">
 						<div class="main-navbar-items left hidden-xs hidden-sm">
-							<object  data="assets/img/logo_full.svg" alt="" class="logo-full"></object>
+							<a class="logo-link" href="/"><img  src="assets/img/logo_full.svg" draggable="false" alt="Rocketz - Equipe-se Para Vencer!" class="logo-full noselect"></a>
 							<div class="search-holder ">
 								<input type="text" name="" value="" class="search-input">
 							</div>
@@ -128,59 +142,81 @@
 			</div>
 		</div>
 		<div class="navdrop hidden-xs hidden-sm">
-			<div class="container nav-items">
+			<<div class="container nav-items">
 				<div class="nav-items-left">
-					<div class="nav-item">
-						<img alt="Mousepad Gamer" src="assets/img/mousepad.svg">
-						<span class="item-label"> Mousepad</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Headset Gamer" src="assets/img/headset.svg">
-						<span class="item-label"> Headset</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Mouse Gamer" src="assets/img/mouse.svg">
-						<span class="item-label"> Mouse</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Teclado Gamer" src="assets/img/teclado.svg">
-						<span class="item-label"> Teclado</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Workstation" src="assets/img/workstation.svg">
-						<span class="item-label"> Workstation</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Pc Gamer" src="assets/img/pc.svg">
-						<span class="item-label"> Pc Gamer</span>
-					</div>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Mousepad Gamer" src="assets/img/mousepad.svg">
+							<span class="item-label"> Mousepad</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Headset Gamer" src="assets/img/headset.svg">
+							<span class="item-label"> Headset</span>
+						</div>
+					</a>
+					<a href="/mouse-gamer" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Mouse Gamer" src="assets/img/mouse.svg">
+							<span class="item-label"> Mouse</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Teclado Gamer" src="assets/img/teclado.svg">
+							<span class="item-label"> Teclado</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Workstation" src="assets/img/workstation.svg">
+							<span class="item-label"> Workstation</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Pc Gamer" src="assets/img/pc.svg">
+							<span class="item-label"> Pc Gamer</span>
+						</div>
+					</a>
 				</div>
 				<div class="nav-item-logo">
 				</div>
 				<div class="nav-items-right">
-					<div class="nav-item">
-						<img alt="Cadeira Gamer" src="assets/img/cadeira.svg">
-						<span class="item-label"> Cadeira</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Monitor Gamer" src="assets/img/monitor.svg">
-						<span class="item-label"> Monitor</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Webcam" src="assets/img/webcam.svg">
-						<span class="item-label"> Webcam</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Simuladores" src="assets/img/simuladores.svg">
-						<span class="item-label"> Simuladores</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Simuladores" src="assets/img/vestuario.svg">
-						<span class="item-label"> Vestuário</span>
-					</div>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Cadeira Gamer" src="assets/img/cadeira.svg">
+							<span class="item-label"> Cadeira</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Monitor Gamer" src="assets/img/monitor.svg">
+							<span class="item-label"> Monitor</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Webcam" src="assets/img/webcam.svg">
+							<span class="item-label"> Webcam</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Simuladores" src="assets/img/simuladores.svg">
+							<span class="item-label"> Simuladores</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Simuladores" src="assets/img/vestuario.svg">
+							<span class="item-label"> Vestuário</span>
+						</div>
+					</a>
 				</div>
 			</div>
-			<div id="pricelifted" class="hidden" name="pricelifted">
+			<div id="assistBar" class="hidden" name="assistBar">
 				<span class="product-name">Nome do Produto</span>
 			</div>
 
@@ -190,54 +226,76 @@
 			<span class="fa fa-angle-left nav-mobile-button" data-id="left"></span>
 			<div class="container nav-items-mobile" data-slideout-ignore>
 				<div class="nav-items-mobile">
-					<div class="nav-item">
-						<img alt="Pc Gamer" src="assets/img/pc.svg">
-						<span class="item-label"> Pc Gamer</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Workstation" src="assets/img/workstation.svg">
-						<span class="item-label"> Workstation</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Teclado Gamer" src="assets/img/teclado.svg">
-						<span class="item-label"> Teclado</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Mouse Gamer" src="assets/img/mouse.svg">
-						<span class="item-label"> Mouse</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Headset Gamer" src="assets/img/headset.svg">
-						<span class="item-label"> Headset</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Mousepad Gamer" src="assets/img/mousepad.svg">
-						<span class="item-label"> Mousepad</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Cadeira Gamer" src="assets/img/cadeira.svg">
-						<span class="item-label"> Cadeira</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Monitor Gamer" src="assets/img/monitor.svg">
-						<span class="item-label"> Monitor</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Webcam" src="assets/img/webcam.svg">
-						<span class="item-label"> Webcam</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Simuladores" src="assets/img/simuladores.svg">
-						<span class="item-label"> Simuladores</span>
-					</div>
-					<div class="nav-item">
-						<img alt="Simuladores" src="assets/img/vestuario.svg">
-						<span class="item-label"> Vestuário</span>
-					</div>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Pc Gamer" src="assets/img/pc.svg">
+							<span class="item-label"> Pc Gamer</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Workstation" src="assets/img/workstation.svg">
+							<span class="item-label"> Workstation</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Teclado Gamer" src="assets/img/teclado.svg">
+							<span class="item-label"> Teclado</span>
+						</div>
+					</a>
+					<a href="/mouse-gamer" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Mouse Gamer" src="assets/img/mouse.svg">
+							<span class="item-label"> Mouse</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Headset Gamer" src="assets/img/headset.svg">
+							<span class="item-label"> Headset</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Mousepad Gamer" src="assets/img/mousepad.svg">
+							<span class="item-label"> Mousepad</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Cadeira Gamer" src="assets/img/cadeira.svg">
+							<span class="item-label"> Cadeira</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Monitor Gamer" src="assets/img/monitor.svg">
+							<span class="item-label"> Monitor</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Webcam" src="assets/img/webcam.svg">
+							<span class="item-label"> Webcam</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Simuladores" src="assets/img/simuladores.svg">
+							<span class="item-label"> Simuladores</span>
+						</div>
+					</a>
+					<a href="#" class="nav-item-link">
+						<div class="nav-item">
+							<img alt="Simuladores" src="assets/img/vestuario.svg">
+							<span class="item-label"> Vestuário</span>
+						</div>
+					</a>
 				</div>
 			</div>
 			<span class="fa fa-angle-right nav-mobile-button" data-id="right"></span>
-			<div id="pricelifted" class="hidden" name="pricelifted" >
+			<div id="assistBar" class="hidden" name="assistBar" >
 				<span class="product-name">Nome do Produto</span>
 			</div>
 		</div>
@@ -388,9 +446,122 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
-
+					
+					
+				<div class="rktz-holder">
+				<div class="rktz-title-holder">
+				<div class="hre"></div><p class="rktz-title">RKTZ</p><div class="hre"></div>
+				</div>
+					<div class="setup-holder-pc">
+							<div class="animated fadeInUp" data-wow-duration="0.8s">
+								<div class="setup-pc-box" >
+									<div class="pc-box-title">
+										<span>ROCKETZ POWER WHITE</span>
+									</div>
+									<img src="assets/img/camiseta.jpg">
+									<div class="pc-box-price">
+										<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 59,00</span></div></div>
+										<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 5,59</d></div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span class=""><span>CONFERIR</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="setup-holder-products">
+							<div class="animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="0.8s">
+								<div class="setup-product-box">
+									<div class="setup-product-box-top">
+										<div class="setup-product-box-title-holder">
+											<span class="setup-product-box-category">BONÉ</span>
+											<span class="setup-product-box-title">SNAPBACK GRAY</span>
+										</div>
+										<div class="setup-product-box-img-holder">
+											<img src="assets/img/bone.jpg">
+										</div>
+									</div>
+									<div class="setup-product-box-bottom">
+										<div class="setup-product-box-price-holder">
+											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 79,00</span></div></div>
+											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 7,79</d></div>
+										</div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span><span>IR PARA O PRODUTO</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+								<div class="setup-product-box">
+									<div class="setup-product-box-top">
+										<div class="setup-product-box-title-holder">
+											<span class="setup-product-box-category">MOUSEPAD</span>
+											<span class="setup-product-box-title">ROCKETZ MINI</span>
+										</div>
+										<div class="setup-product-box-img-holder">
+											<img src="assets/img/mousepad.jpg">
+										</div>
+									</div>
+									<div class="setup-product-box-bottom">
+										<div class="setup-product-box-price-holder">
+											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 49,00</span></div></div>
+											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 4,49</d></div>
+										</div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span><span>IR PARA O PRODUTO</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
+							<div class="setup-holder-pc">
+							<div class="animated fadeInUp" data-wow-duration="0.8s">
+								<div class="setup-pc-box" >
+									<div class="pc-box-title">
+										<span>I GREW UP</span>
+									</div>
+									<img src="assets/img/camiseta2.jpg">
+									<div class="pc-box-price">
+										<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 59,00</span></div></div>
+										<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 5,59</d></div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span class=""><span>CONFERIR</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+							
+				</div>
+				
+				<div class="rktz-holder">
+				<div class="rktz-title-holder">
+				<div class="hre"></div><p class="rktz-title">VIDEOS</p><div class="hre"></div>
+				</div>
+				 <div class="item">
+            <ul id="content-slider" class="content-slider">
+                <li>
+                    <h3>1</h3>
+                </li>
+                <li>
+                    <h3>2</h3>
+                </li>
+                <li>
+                    <h3>3</h3>
+                </li>
+                <li>
+                    <h3>4</h3>
+                </li>
+                <li>
+                    <h3>5</h3>
+                </li>
+                <li>
+                    <h3>6</h3>
+                </li>
+            </ul>
+        </div>
+				
+				</div>
+				</div>
 				</section>
 				<div id="footer">
 				<section class="container">
@@ -482,7 +653,7 @@
 
 
 
-	<script src="assets/js/jquery-2.1.3.min.js"></script>
+	
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/owl.carousel.js"></script>

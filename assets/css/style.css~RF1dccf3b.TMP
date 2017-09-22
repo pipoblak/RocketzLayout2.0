@@ -6,18 +6,13 @@ html,body{
   margin: 0;
   height: 100%;
 }
-a{
-  display: flex;
-  text-decoration: none !important;
-}
+
 body{
   display: flex;
   flex-direction: column;
 }
 .noselect{
   user-select: none;
-  user-drag:none;
-  -webkit-user-drag:none;
 }
 .accelerated {
   -webkit-transform: translateZ(0);
@@ -87,17 +82,7 @@ body{
 @media only screen and (max-width: 768px) {
 
 }
-@media only screen and (max-width: 537px) {
-  .content-menu-option-label{
-    font-size: 12px;
-  }
-  .content-menu-option{
-    padding: 8px !important;
-  }
-  .content-menu-option>.fa{
-    margin-right: 8px !important;
-  }
-}
+
 @media only screen and (max-width: 425px) {
   .main-banner{
     height: 30% !important;
@@ -128,18 +113,8 @@ body{
   .main-banner{
     height: 25% !important;
   }
-  .content-menu-option-label{
-    font-size: 10px;
-  }
-  .content-menu-option-options-option-label>span{
-    margin: auto 0;
-    font-size: 8px !important;
-  }
-  .content-menu-option>.fa{
-    margin-right: 1px !important;
-  }
-}
 
+}
 @media only screen and (max-width: 360px) {
   .setup-holder-pc{
     min-width: 80% !important;
@@ -678,15 +653,9 @@ body{
 .logo:hover::before{
   transform: scale(1.05);
 }
-.logo-link{
+.logo-full{
   width: 30%;
-}
-.logo-full{
-  width: 100%;
   padding: 16px;
-}
-.logo-full{
-  cursor: pointer;
 }
 .navbar {
 	position: fixed;
@@ -724,10 +693,10 @@ body{
 .navlift>span{
   opacity: 0;
 }
-.navlift>.nav-items>div>a>div{
+.navlift>.nav-items>div>div{
   visibility: hidden;
 }
-.navlift>.nav-items>div>a>div>*{
+.navlift>.nav-items>div>div>*{
   opacity: 0;
   transition-delay: 0s !important;
 }
@@ -791,8 +760,6 @@ body{
 .nav-item>*{
   transition: all 0.25s;
   transition-delay: 0.1s;
-  user-drag: none;
-  -webkit-user-drag: none;
 }
 
 .item-label{
@@ -1471,8 +1438,6 @@ body{
 }
 
 .rktz-title {
-	font-family: "Saira";
-	font-weight: 400;
 	color: #888888 !important;
 	margin-top: 10px;
 	margin-left: 20px;
@@ -1504,62 +1469,31 @@ body{
 }
 }
 
-ul{
-list-style: none outside none;
-padding-left: 0;
-margin: 0;
-		}
-.item{
-margin-bottom: 60px;
-        }
-.content-slider li{
-text-align: center;
-text-shadow: -2px 1px 0px rgba(27, 27, 27, 1);
-color: #FFF;
-background-color:rgba(32,0,46,0.50);
-	}
-.content-slider h3 {
-margin: 0;
-padding: 70px 0;
-		}
-
 .default-view-content{
-  margin-top:16px;
+  margin-top:56px;
 }
 .content-menu-holder{
   width: 100%;
-  min-height: 64px;
+  height: 64px;
   font-family: "Saira";
   display: flex;
-  flex-wrap: wrap;
 }
 .content-menu-title-holder{
-  display: flex;
-  margin: auto;
+  width: 50%;
 }
 .content-menu-options-holder{
+  width: 50%;
   display: flex;
-  margin: auto;
 }
 .content-menu-title{
   font-size: 32px;
-  margin: auto;
+  margin: auto 0;
 }
 .content-menu-option{
   margin: auto;
+  height: 32px;
   display: flex;
   padding: 16px;
-  height: 100%;
-  position: relative;
-  min-height: 52px;
-  max-height: 100%;
-  z-index: 1;
-}
-.content-menu-option:hover{
-  background: #ccc;
-}
-.content-menu-option>.fa{
-  margin-right: 16px;
 }
 .content-menu-option>span{
   margin: auto 0;
@@ -1567,71 +1501,4 @@ padding: 70px 0;
 .content-menu-option-label{
   margin-left: 16px;
   font-family: "Saira";
-  text-align: center;
-}
-.content-menu-option-options-holder{
-  width: 100%;
-  background: white;
-  max-height: 200px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transition: all 0.2s;
-  display: flex;
-  transform: translateY(-16px) scaleY(0);
-  visibility: hidden;
-  border: solid 1px #ccc;
-  border-top:none;
-  overflow: hidden;
-  overflow-y: auto;
-  z-index: 0;
-  flex-direction: column;
-  opacity: 0;
-}
-.content-menu-option:hover>.content-menu-option-options-holder{
-  transform: translateY(52px) scaleY(1) ;
-  visibility: visible;
-  opacity: 1;
-
-}
-.content-menu-option:hover>.content-menu-option-options-holder>a{
-  min-height: 32px;
-}
-
-.content-menu-option-options-option-holder{
-  height: 32px;
-  display: flex;
-  width: 100%;
-  flex-direction: row-reverse;
-}
-.content-menu-option-options-option-holder:hover{
-  cursor: pointer;
-  background:#e2e2e2;
-}
-.content-menu-option-options-option-logo{
-  display: flex;
-  margin-right: 16px;
-}
-.content-menu-option-options-option-logo>img{
-  margin: auto;
-  /*-webkit-filter: invert(100%);
-  filter: invert(100%);
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);*/
-  max-width: 16px;
-  max-height: 16px;
-}
-.content-menu-option-options-option-logo>.fa{
-  margin: auto;
-  color:#656565;
-}
-.content-menu-option-options-option-label{
-  color: #656565;
-  display: flex;
-  margin: auto;
-  margin-left: 16px;
-}
-.content-menu-option-options-option-label>span{
-  margin: auto 0;
-  font-size: 12px;
 }

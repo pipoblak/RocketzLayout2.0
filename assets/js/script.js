@@ -97,17 +97,20 @@ var isCategoriesMenuOnTop=true;
 var isAssistBarActive;
 $(".body-holder").scroll(function(event){
   var scroll = $(event.target).scrollTop();
-  if(isAssistBarActive){
-    var mydivpos = document.getElementById("pricelowered").offsetTop;
-    var assistBar= $("div[name*=pricelifted]");
-    if(scroll >= mydivpos)
-
-      $("div[name*=pricelifted]").attr("class"," wow animated fadeInDown");
-    else
+  if($("div[assist-bar-trigger=true]").length>=1){
+    var mydivpos =$("div[assist-bar-trigger=true]").offset().top;
+    var assistBar= $("div[name*=assistBar]");
+    if(scroll >= mydivpos+300){
+      if(assistBar.hasClass("hidden")){
+        assistBar.removeClass("hidden");
+      }
+    }
+    else{
       if(!assistBar.hasClass("hidden")){
-        $("div[name*=pricelifted]").attr("class","wow animated fadeOutUp");
         assistBar.addClass("hidden");
       }
+    }
+
 
   }
   if (scroll >= 10){
@@ -229,4 +232,12 @@ $(".search-holder-mobile").on("click",function(){
       $(".search-input-mobile").find(".search-input-mobile-input").focus();
     });
   searchResultsHolder.toggleClass("hidden");
+});
+
+//NAV ITEM
+$("*[data-link]").on("click",function(event){
+  var link = $(event.delegateTarget).attr("data-link");
+  if(link){
+   window.location=link;
+  }
 });
