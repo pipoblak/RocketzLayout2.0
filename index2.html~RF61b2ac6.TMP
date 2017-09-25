@@ -81,34 +81,6 @@
             });
 		});
     </script>
-    <script>
-    	 $(document).ready(function() {
-			$("#content-slider2").lightSlider({
-                loop:false,
-				auto:false,
-				pause:4000,
-                keyPress:true,
-				pager:false,
-				responsive : [
-            {
-                breakpoint:800,
-                settings: {
-                    item:4,
-                    slideMove:1,
-                    slideMargin:6,
-                  }
-            },
-            {
-                breakpoint:480,
-                settings: {
-                    item:2,
-                    slideMove:1
-                  }
-            }
-        ]
-            });
-		});
-    </script>
     <script>if(location.hostname.match(/ricostacruz\.com$/)){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()}</script>
 </head>
 <body id="home" style="display:flex;">
@@ -587,16 +559,16 @@
 				 <div class="item">
             <ul id="content-slider" class="content-slider">
                 <li>
-                <h3>COMO FOI MONTAR UM PC NUMA MESA</h3>
-               <img src="assets/img/thumb2.png" width="100%">
-                </li>
-                <li>
-                <h3>DEU RUIM NA MALETA DO RATÃO? #3</h3>
+                <h3>Deu ruim na maleta do Ratão? #3</h3>
                <img src="assets/img/thumb.png" width="100%">
                 </li>
                 <li>
-				<h3>AQUI QUE VAMOS MONTAR O PC DO RATÃO #2</h3>
-               <img src="assets/img/thumb3.png" width="100%">
+                <h3>Deu ruim na maleta do Ratão? #3</h3>
+               <img src="assets/img/thumb.png" width="100%">
+                </li>
+                <li>
+				<h3>Deu ruim na maleta do Ratão? #3</h3>
+               <img src="assets/img/thumb.png" width="100%">
                 </li>
                 <li>
 				<h3>Deu ruim na maleta do Ratão? #3</h3>
@@ -604,32 +576,7 @@
                 </li>
             </ul>
         </div>
-				</div>
-				
-				<div class="rktz-holder">
-				<div class="rktz-title-holder">
-				<div class="hre"></div><p class="rktz-title">NOTÍCIAS</p><div class="hre"></div>
-				</div>
-				 <div class="item">
-            <ul id="content-slider2" class="content-slider-news">
-                <li>
-               <img src="assets/img/news.png" width="100%">
-               <h3>NVIDIA GERFORCE - OVERWATCH</h3>
-                </li>
-                <li>
-               <img src="assets/img/news2.png" width="100%">
-               <h3>ZOWIE CONQUISTANDO O PÚBLICO</h3>
-                </li>
-                <li>
-               <img src="assets/img/news3.png" width="100%">
-               <h3>A IMPORTÂNCIA DE UMA CADEIRA GAMER</h3>
-                </li>
-                <li>
-               <img src="assets/img/news3.png" width="100%">
-               <h3>A IMPORTÂNCIA DE UMA CADEIRA GAMER</h3>
-                </li>
-            </ul>
-        </div>
+
 				</div>
 				</section>
 				<div id="footer">

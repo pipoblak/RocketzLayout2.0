@@ -124,7 +124,7 @@ body{
   .price-style-card>d{
     font-size: 18px !important;
   }
-  .pc-box{
+  .setup-pc-box{
     height: 455px !important;
   }
   .content-menu-option-options-option-logo{
@@ -163,7 +163,7 @@ body{
 }
 
 @media only screen and (max-width:765px) {
-  .pc-box>.pc-box-hover>span{
+  .setup-pc-box>.pc-box-hover>span{
     margin: auto auto 50px auto;
   }
 }
@@ -573,7 +573,7 @@ body{
   margin-right:  7%;
 }
 .social-holder > span{
-  margin:auto;
+  margin:auto 0;
   margin-right: 16px;
   font-size: 24px;
 }
@@ -685,7 +685,7 @@ body{
   margin: auto;
   content: "\f106";
   color: white;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-family: "FontAwesome";
   font-size: 24px;
   display: block;
@@ -717,9 +717,9 @@ body{
 	z-index: 2;
   transform: translateZ(0);
   backface-visibility: hidden;
-  margin-bottom: 0 ;
 }
 .navdrop {
+  top:72px;
 	position: fixed;
 	width: 100%;
 	height: 72px;
@@ -731,8 +731,6 @@ body{
   border-bottom: solid 1px #ccc;
   transform: translateZ(0);
   opacity: 1;
-  min-height: 72px;
-  top:72px;
 }
 .navlift {
   position: fixed;
@@ -853,7 +851,7 @@ body{
   position: absolute;
   top:100%;
 	width: 100%;
-	height: 52px;
+	height: 56px;
 	background-color: rgba(255,255,255,1.00);
   font-family: "Saira";
   display: flex;
@@ -869,10 +867,10 @@ body{
   transform: translateY(-56px) !important;
 }
 #main-content{
-  height:100%;
+  top:144px;
+  height: 100%;
   position: relative;
   z-index: 0;
-  padding-top: 144px;
 }
 .main-banner{
   height: 40%;
@@ -1232,7 +1230,7 @@ body{
   min-width: 310px;
   width: 50%;
 }
-.pc-box{
+.setup-pc-box{
   height: 510px;
   background: white;
   display: flex;
@@ -1241,9 +1239,8 @@ body{
   position: relative;
   max-width: 330px;
   margin: auto;
-  border: solid 1px #ccc;
 }
-.pc-box::before{
+.setup-pc-box::before{
   content: "";
   border-radius: 7px;
   position: absolute;
@@ -1255,16 +1252,16 @@ body{
   transition: all 0.2s;
   background: rgba(0,0,0,0.0);
 }
-.pc-box:hover{
+.setup-pc-box:hover{
   cursor: pointer;
 }
-.pc-box:hover::before{
+.setup-pc-box:hover::before{
   content:"";
   text-align: center;
   visibility: visible;
   color:white;
 }
-.pc-box:hover>.pc-box-hover{
+.setup-pc-box:hover>.pc-box-hover{
   visibility: visible;
   transition: all 1s;
   opacity: 1;
@@ -1287,10 +1284,10 @@ body{
   height: auto;
   margin:auto auto 60px auto;
 }
-.pc-box:hover>img{
+.setup-pc-box:hover>img{
   transform: scale(1.1);
 }
-.pc-box>img{
+.setup-pc-box>img{
   width: 80%;
   margin: auto;
   transition: all 0.5s;
@@ -1332,7 +1329,6 @@ body{
   flex-direction: column;
   margin: auto;
   position: relative;
-  border: solid 1px #ccc;
 }
 .product-box::before{
   content: "";
@@ -1452,7 +1448,7 @@ body{
 	padding-left: 0px;
 	font-family: "Saira";
 	font-weight: 300;
-	font-size: 12px;
+	font-size: 13px;
   margin: auto;
 }
 
@@ -1551,35 +1547,20 @@ margin: 0;
 		}
 .item{
 width: 100%;
-height: 120px;
-margin-bottom: 10px;
+margin-bottom: 60px;
 marging-right: 30px;
         }
 .content-slider li{
-width: 17% !important;
+width: 260px !important;
 text-align: center;
-color: #000;
-background-color: transparent;
+text-shadow: -2px 1px 0px rgba(27, 27, 27, 1);
+color: #FFF;
+background-color:rgba(32,0,46,0.50);
 margin-left: 90px;
 }
 .content-slider h3 {
 margin: 0;
-padding: 5px 0;
-font-family: "Saira";
-font-size: 20px;
-}
-.content-slider-news li{
-width: 17% !important;
-text-align: center;
-color: #000;
-background-color: transparent;
-margin-left: 90px;
-}
-.content-slider-news h3 {
-margin: 0;
-padding: 5px 0;
-font-family: "Saira";
-font-size: 20px;
+padding: 70px 0;
 }
 
 .default-view-content{
@@ -1587,7 +1568,7 @@ font-size: 20px;
 }
 .content-menu-holder{
   width: 100%;
-  min-height: 128px;
+  min-height: 64px;
   font-family: "Saira";
   display: flex;
   flex-wrap: wrap;
@@ -1714,14 +1695,13 @@ font-size: 20px;
 .video-title {
 }
 
-.showcase-holder{
+.show-case-holder{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  padding: 16px;
+  justify-content: space-between;
 }
-.showcase-holder > .product-box{
-  margin: 0;
-  margin-top: 32px;
-  border: solid 1px #ccc;
+.show-case-holder > .product-box{
+  margin-top?16px/
 }

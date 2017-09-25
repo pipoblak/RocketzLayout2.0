@@ -101,7 +101,7 @@ $(".body-holder").scroll(function(event){
   if($("div[assist-bar-trigger=true]").length>=1){
     var mydivpos =$("div[assist-bar-trigger=true]").offset().top;
     var assistBar= $("div[name*=assistBar]");
-    if(scroll >= mydivpos+300){
+    if(scroll >= mydivpos + 150){
       if(assistBar.hasClass("hidden")){
         assistBar.removeClass("hidden");
       }
@@ -122,11 +122,12 @@ $(".body-holder").scroll(function(event){
     }
   }
   else if(scroll==0 || scroll<lastScroll ){
-    if(!isCategoriesMenuOnTop){
+    if(!isCategoriesShowing){
       toggleCategoriesNav();
+    }
+    if(scroll==0){
       isCategoriesMenuOnTop=true;
     }
-
 
   }
 

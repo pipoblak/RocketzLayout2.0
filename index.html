@@ -12,13 +12,16 @@
 		<meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <script src="assets/js/jquery-2.1.3.min.js"></script>
     <script src="assets/js/nprogress.js"></script>
+    <script src="assets/js/lightslider.js"></script>
 
 	<!-- css -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/ionicons.min.css">
+	<link rel="stylesheet" href="assets/css/lightslider.css">
 	<link href="assets/css/nprogress.css" rel="stylesheet" />
 	<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
@@ -50,6 +53,62 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor<a href="http://browsehappy.com/"> atualize o seu navegador</a> para melhorar a sua experiência.</p>
     <![endif]-->
+    <script>
+    	 $(document).ready(function() {
+			$("#content-slider").lightSlider({
+                loop:false,
+				auto:false,
+				pause:4000,
+                keyPress:true,
+				pager:false,
+				responsive : [
+            {
+                breakpoint:800,
+                settings: {
+                    item:4,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:2,
+                    slideMove:1
+                  }
+            }
+        ]
+            });
+		});
+    </script>
+    <script>
+    	 $(document).ready(function() {
+			$("#content-slider2").lightSlider({
+                loop:false,
+				auto:false,
+				pause:4000,
+                keyPress:true,
+				pager:false,
+				responsive : [
+            {
+                breakpoint:800,
+                settings: {
+                    item:4,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:2,
+                    slideMove:1
+                  }
+            }
+        ]
+            });
+		});
+    </script>
     <script>if(location.hostname.match(/ricostacruz\.com$/)){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()}</script>
 </head>
 <body id="home" style="display:flex;">
@@ -84,7 +143,7 @@
 		<div class="navbar">
 			<div class="logo-button-holder">
 				<div class="container">
-					<div class="logo " align="center">
+					<div class="logo" align="center">
 					</div>
 				</div>
 
@@ -96,23 +155,21 @@
 				<section class="container">
 					<section class="row">
 						<div class="main-navbar-items left hidden-xs hidden-sm">
-							<a class="logo-link" href="/"><img  src="assets/img/logo_full.svg" draggable="false" alt="Rocketz - Equipe-se Para Vencer!" class="logo-full noselect"></a>
-							<div class="search-holder ">
-								<input type="text" name="" value="" class="search-input">
-							</div>
+							<a class="logo-link" href="/"><img  src="assets/img/logo_full2.svg" draggable="false" alt="Rocketz - Equipe-se Para Vencer!" class="logo-full noselect"></a>
 							<div class="social-holder left">
 								<span class="fa fa-facebook-square"></span>
 								<span class="fa fa-twitter"></span>
+								<span class="fa fa-youtube"></span>
+								<span class="fa fa-instagram"></span>
+								<span class="fa fa-twitch"></span>
 							</div>
 						</div>
 						<div class="main-navbar-items rigth ">
-							<div class="social-holder right hidden-xs hidden-sm">
-								<span class="fa fa-youtube"></span>
-								<span class="fa fa-instagram"></span>
+							<div class="search-holder hidden-xs hidden-sm">
+								<input type="text" name="" value="" class="search-input">
 							</div>
 							<div class="account-buttons-holder hidden-xs hidden-sm">
-								<!-- <button type="button" class="account-button"><span class="fa fa-cubes"></span><span> Meu Setup</span></button> -->
-								<button type="button" class="account-button"><span class="fa fa-user"></span><span>Minha Conta</span> </button>
+								<button type="button" class="account-button"><span class="fa fa-user-circle-o"></span></button>
 							</div>
 							<div class="search-holder-mobile hidden-md hidden-lg">
 								<span class="fa fa-search"></span>
@@ -325,7 +382,7 @@
 					<div class="setup-holder">
 						<div class="setup-holder-pc">
 							<div class="animated fadeInUp" data-wow-duration="0.8s">
-								<div class="setup-pc-box" >
+								<div class="pc-box" >
 									<div class="pc-box-title">
 										<span><img src="assets/img/fire.svg"> FIRESTORM</span>
 									</div>
@@ -342,18 +399,18 @@
 						</div>
 						<div class="setup-holder-products">
 							<div class="animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="0.8s">
-								<div class="setup-product-box">
-									<div class="setup-product-box-top">
-										<div class="setup-product-box-title-holder">
-											<span class="setup-product-box-category">MOUSE GAMER</span>
-											<span class="setup-product-box-title">MAMBA TOURNAMENT</span>
+								<div class="product-box">
+									<div class="product-box-top">
+										<div class="product-box-title-holder">
+											<span class="product-box-category">MOUSE GAMER</span>
+											<span class="product-box-title">MAMBA TOURNAMENT</span>
 										</div>
-										<div class="setup-product-box-img-holder">
+										<div class="product-box-img-holder">
 											<img src="assets/img/mamba.png">
 										</div>
 									</div>
-									<div class="setup-product-box-bottom">
-										<div class="setup-product-box-price-holder">
+									<div class="product-box-bottom">
+										<div class="product-box-price-holder">
 											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 598,40</span></div></div>
 											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 56,67</d></div>
 										</div>
@@ -364,18 +421,18 @@
 								</div>
 							</div>
 							<div class="animated fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
-								<div class="setup-product-box">
-									<div class="setup-product-box-top">
-										<div class="setup-product-box-title-holder">
-											<span class="setup-product-box-category">HEADSET GAMER</span>
-											<span class="setup-product-box-title">ARTEMIS G933</span>
+								<div class="product-box">
+									<div class="product-box-top">
+										<div class="product-box-title-holder">
+											<span class="product-box-category">HEADSET GAMER</span>
+											<span class="product-box-title">ARTEMIS G933</span>
 										</div>
-										<div class="setup-product-box-img-holder">
+										<div class="product-box-img-holder">
 											<img src="assets/img/artemis.png">
 										</div>
 									</div>
-									<div class="setup-product-box-bottom">
-										<div class="setup-product-box-price-holder">
+									<div class="product-box-bottom">
+										<div class="product-box-price-holder">
 											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 958,32</span></div></div>
 											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 90,75</d></div>
 										</div>
@@ -386,18 +443,18 @@
 								</div>
 							</div>
 							<div class="animated fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.8s">
-								<div class="setup-product-box">
-									<div class="setup-product-box-top">
-										<div class="setup-product-box-title-holder">
-											<span class="setup-product-box-category">TECLADO GAMER</span>
-											<span class="setup-product-box-title">PRODIGY G810</span>
+								<div class="product-box">
+									<div class="product-box-top">
+										<div class="product-box-title-holder">
+											<span class="product-box-category">TECLADO GAMER</span>
+											<span class="product-box-title">PRODIGY G810</span>
 										</div>
-										<div class="setup-product-box-img-holder">
+										<div class="product-box-img-holder">
 											<img src="assets/img/g810.png">
 										</div>
 									</div>
-									<div class="setup-product-box-bottom">
-										<div class="setup-product-box-price-holder">
+									<div class="product-box-bottom">
+										<div class="product-box-price-holder">
 											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 755,32</span></div></div>
 											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 51,75</d></div>
 										</div>
@@ -408,18 +465,18 @@
 								</div>
 							</div>
 							<div class=" animated fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
-								<div class="setup-product-box animated">
-									<div class="setup-product-box-top">
-										<div class="setup-product-box-title-holder">
-											<span class="setup-product-box-category">MONITOR GAMER</span>
-											<span class="setup-product-box-title">ZOWIE 27"</span>
+								<div class="product-box animated">
+									<div class="product-box-top">
+										<div class="product-box-title-holder">
+											<span class="product-box-category">MONITOR GAMER</span>
+											<span class="product-box-title">ZOWIE 27"</span>
 										</div>
-										<div class="setup-product-box-img-holder">
+										<div class="product-box-img-holder">
 											<img src="assets/img/zowie.png">
 										</div>
 									</div>
-									<div class="setup-product-box-bottom">
-										<div class="setup-product-box-price-holder">
+									<div class="product-box-bottom">
+										<div class="product-box-price-holder">
 											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 2.038,61</span></div></div>
 											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 193,05</d></div>
 										</div>
@@ -432,6 +489,144 @@
 						</div>
 
 					</div>
+					<div class="rktz-holder">
+				<div class="rktz-title-holder">
+				<div class="hre"></div><p class="rktz-title">RKTZ</p><div class="hre"></div>
+				</div>
+					<div class="setup-holder-pc">
+							<div class="animated fadeInUp" data-wow-duration="0.8s">
+								<div class="pc-box" >
+									<div class="pc-box-title">
+										<span>ROCKETZ POWER WHITE</span>
+									</div>
+									<img src="assets/img/camiseta.jpg">
+									<div class="pc-box-price">
+										<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 59,00</span></div></div>
+										<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 5,59</d></div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span class=""><span>CONFERIR</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="setup-holder-products">
+							<div class="animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="0.8s">
+								<div class="product-box">
+									<div class="product-box-top">
+										<div class="product-box-title-holder">
+											<span class="product-box-category">BONÉ</span>
+											<span class="product-box-title">SNAPBACK GRAY</span>
+										</div>
+										<div class="product-box-img-holder">
+											<img src="assets/img/bone.jpg">
+										</div>
+									</div>
+									<div class="product-box-bottom">
+										<div class="product-box-price-holder">
+											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 79,00</span></div></div>
+											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 7,79</d></div>
+										</div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span><span>IR PARA O PRODUTO</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+								<div class="product-box">
+									<div class="product-box-top">
+										<div class="product-box-title-holder">
+											<span class="product-box-category">MOUSEPAD</span>
+											<span class="product-box-title">ROCKETZ MINI</span>
+										</div>
+										<div class="product-box-img-holder">
+											<img src="assets/img/mousepad.jpg">
+										</div>
+									</div>
+									<div class="product-box-bottom">
+										<div class="product-box-price-holder">
+											<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 49,00</span></div></div>
+											<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 4,49</d></div>
+										</div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span><span>IR PARA O PRODUTO</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
+							<div class="setup-holder-pc">
+							<div class="animated fadeInUp" data-wow-duration="0.8s">
+								<div class="pc-box" >
+									<div class="pc-box-title">
+										<span>I GREW UP</span>
+									</div>
+									<img src="assets/img/camiseta2.jpg">
+									<div class="pc-box-price">
+										<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 59,00</span></div></div>
+										<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 5,59</d></div>
+									</div>
+									<div class="pc-box-hover noselect" >
+										<span class=""><span>CONFERIR</span> <span class="fa fa-caret-right"></span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+				</div>
+
+
+				</div>
+
+				<div class="rktz-holder">
+				<div class="rktz-title-holder">
+				<div class="hre"></div><p class="rktz-title">VIDEOS</p><div class="hre"></div>
+				</div>
+				 <div class="item">
+            <ul id="content-slider" class="content-slider">
+                <li>
+                <h3>COMO FOI MONTAR UM PC NUMA MESA</h3>
+               <img src="assets/img/thumb2.png" width="100%">
+                </li>
+                <li>
+                <h3>DEU RUIM NA MALETA DO RATÃO? #3</h3>
+               <img src="assets/img/thumb.png" width="100%">
+                </li>
+                <li>
+				<h3>AQUI QUE VAMOS MONTAR O PC DO RATÃO #2</h3>
+               <img src="assets/img/thumb3.png" width="100%">
+                </li>
+                <li>
+				<h3>Deu ruim na maleta do Ratão? #3</h3>
+               <img src="assets/img/thumb.png" width="100%">
+                </li>
+            </ul>
+        </div>
+				</div>
+				
+				<div class="rktz-holder">
+				<div class="rktz-title-holder">
+				<div class="hre"></div><p class="rktz-title">NOTÍCIAS</p><div class="hre"></div>
+				</div>
+				 <div class="item">
+            <ul id="content-slider2" class="content-slider-news">
+                <li>
+               <img src="assets/img/news.png" width="100%">
+               <h3>NVIDIA GERFORCE - OVERWATCH</h3>
+                </li>
+                <li>
+               <img src="assets/img/news2.png" width="100%">
+               <h3>ZOWIE CONQUISTANDO O PÚBLICO</h3>
+                </li>
+                <li>
+               <img src="assets/img/news3.png" width="100%">
+               <h3>A IMPORTÂNCIA DE UMA CADEIRA GAMER</h3>
+                </li>
+                <li>
+               <img src="assets/img/news3.png" width="100%">
+               <h3>A IMPORTÂNCIA DE UMA CADEIRA GAMER</h3>
+                </li>
+            </ul>
+        </div>
+				</div>
 
 				</section>
 				<div id="footer">
@@ -524,7 +719,6 @@
 
 
 
-	<script src="assets/js/jquery-2.1.3.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/owl.carousel.js"></script>
