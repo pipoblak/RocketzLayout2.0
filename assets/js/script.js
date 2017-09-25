@@ -5,7 +5,56 @@ closeSidewrapper=function(){
   sidewrapper.close();
 }
 jQuery(document).ready(function($) {
-
+  if($("#content-slider").length)
+  $("#content-slider").lightSlider({
+    loop:false,
+    auto:false,
+    pause:4000,
+    keyPress:true,
+    pager:false,
+    responsive : [
+      {
+        breakpoint:1000,
+        settings: {
+          item:2,
+          slideMove:1,
+          slideMargin:6,
+        }
+      },
+      {
+        breakpoint:610,
+        settings: {
+            item:1,
+            slideMove:1
+          }
+      }
+    ]
+  });
+  if($("#content-slider2").length)
+  $("#content-slider2").lightSlider({
+    loop:false,
+    auto:false,
+    pause:4000,
+    keyPress:true,
+    pager:false,
+    responsive : [
+      {
+        breakpoint:1000,
+        settings: {
+        item:2,
+        slideMove:1,
+        slideMargin:6,
+        }
+      },
+      {
+        breakpoint:480,
+        settings: {
+          item:1,
+          slideMove:1
+        }
+      }
+    ]
+  });
 
 
 

@@ -14,6 +14,11 @@ body{
   display: flex;
   flex-direction: column;
 }
+ul{
+  list-style: none outside none;
+  padding-left: 0;
+  margin: 0;
+}
 .noselect{
   user-select: none;
   user-drag:none;
@@ -49,6 +54,14 @@ body{
        transform:rotate(180deg);
     }
 }
+@media only screen and (max-width: 1199px) {
+  .setup-holder-products{
+    width: 100% !important;
+  }
+  .product-box{
+    margin-top: 16px !important;
+  }
+}
 @media only screen and (max-width: 1000px) {
     .footer-addresses{
       margin: auto !important;
@@ -76,9 +89,7 @@ body{
       flex-direction: column !important;
       width: 100% !important;
     }
-    .setup-holder-products{
-      width: 100% !important;
-    }
+
 }
 
 
@@ -127,11 +138,21 @@ body{
   .pc-box{
     height: 455px !important;
   }
+  .product-set-holder>.setup-holder-products>div{
+    height: 455px !important;
+  }
   .content-menu-option-options-option-logo{
     margin-right: 8px !important;
   }
   .content-menu-option-options-option-logo>.fa{
     font-size: 12px;
+  }
+  .product-set-title-holder{
+    margin-bottom: 40px !important;
+    margin-top: 40px !important;
+  }
+  .hre{
+      width: 20% !important;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -1218,6 +1239,7 @@ body{
 }
 .setup-holder-pc>div{
   margin:0 auto;
+  width: 100%;
 }
 .setup-holder-products{
   width: 70%;
@@ -1229,7 +1251,7 @@ body{
 }
 .setup-holder-products>div{
   margin: auto;
-  min-width: 310px;
+  min-width: 325px;
   width: 50%;
 }
 .pc-box{
@@ -1331,6 +1353,7 @@ body{
   display: flex;
   flex-direction: column;
   margin: auto;
+
   position: relative;
   border: solid 1px #ccc;
 }
@@ -1488,8 +1511,7 @@ body{
 	padding-top: 90px;
 }
 
-.rktz-holder {
-  margin-top: 80px;
+.product-set-holder {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1501,7 +1523,7 @@ body{
 	color: rgba(255,255,255,1.00);
 	border-bottom: 1px solid #ccc;
 	max-height: 30px;
-	width: 35%;
+	width: 30%;
 	-webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -1520,66 +1542,88 @@ body{
 	font-size: 30px;
 }
 
-.rktz-title-holder {
-  margin-left: 120px;
+.product-set-title-holder {
   width: 100%;
   height: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   min-height: 50px;
+  justify-content: center;
+  margin-bottom: 80px;
+  margin-top: 80px;
 }
 
-@media only screen and (max-width: 991px) {
-	.rktz-title-holder {
-		margin-left: 30px !important;
-	}
-	}
+.product-set-holder>.setup-holder-products>div{
+  height: 510px;
+  display: flex;
+  flex-direction: column;
+}
+
 
 @media only screen and (max-width: 461px) {
 	.rktz-title {
-		margin-left: 1px !important;
-		margin-right: 1px !important;
 		font-size: 25px;
 }
 }
 
-ul{
-list-style: none outside none;
-padding-left: 0;
-margin: 0;
-		}
+
 .item{
-width: 100%;
-height: 120px;
-margin-bottom: 10px;
-marging-right: 30px;
-        }
-.content-slider li{
-width: 17% !important;
-text-align: center;
-color: #000;
-background-color: transparent;
-margin-left: 90px;
+  width: 100%;
+}
+.content-slider>li{
+  min-height: 300px;
+  text-align: center;
+  color: #000;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content-slider li>*{
+  margin: auto;
+}
+.content-slider >li>img{
+  height: 60%;
+}
+.item.videos>div>div>.lSAction>a{
+  filter: brightness(100) drop-shadow(1px 1px 1px black);
+  top:66% !important;
+}
+.item.videos>div>div>.lSAction>.lSNext{
+  right: 0 !important;
+}
+.item.videos>div>div>.lSAction>.lSPrev{
+  left: 0 !important;
+}
+.item.news>div>div>.lSAction>a{
+  filter: brightness(100) drop-shadow(1px 1px 1px black);
+  top:35% !important;
+}
+.item.news>div>div>.lSAction>.lSNext{
+  right: 0 !important;
+}
+.item.news>div>div>.lSAction>.lSPrev{
+  left: 0 !important;
 }
 .content-slider h3 {
-margin: 0;
-padding: 5px 0;
-font-family: "Saira";
-font-size: 20px;
+  padding: 5px 0;
+  font-family: "Saira";
+  font-size: 20px;
+  margin: auto;
 }
-.content-slider-news li{
-width: 17% !important;
-text-align: center;
-color: #000;
-background-color: transparent;
-margin-left: 90px;
+.content-slider.news li{
+  text-align: center;
+  color: #000;
+  background-color: transparent;
 }
-.content-slider-news h3 {
-margin: 0;
-padding: 5px 0;
-font-family: "Saira";
-font-size: 20px;
+.content-slider-title{
+  height: 20%;
+  display: flex;
+}
+.content-slider.news h3 {
+  font-family: "Saira";
+  font-size: 20px;
 }
 
 .default-view-content{
