@@ -1,4 +1,4 @@
-﻿ <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
 	<title>Rocketz - Equipe-se para vencer</title>
@@ -53,21 +53,6 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor<a href="http://browsehappy.com/"> atualize o seu navegador</a> para melhorar a sua experiência.</p>
     <![endif]-->
-    <script>
-	$(document).ready(function() {
-    $('#vertical').lightSlider({
-      gallery:true,
-      item:1,
-      vertical:true,
-	  thumbsLeft:true,
-      vThumbWidth:100,
-	  verticalHeight:295,
-      thumbItem:4,
-      slideMargin:0,
-	  galleryMargin: 5,
-	  controls: false,
-    });  
-  });</script>
     <script>if(location.hostname.match(/ricostacruz\.com$/)){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()}</script>
 </head>
 <body id="home" style="display:flex;">
@@ -146,9 +131,15 @@
 			<div class="container nav-items">
 				<div class="nav-items-left">
 					<a href="#" class="nav-item-link">
-						<div class="nav-item">
+						<div class="nav-item nav-item-group">
 							<img alt="Mousepad Gamer" src="assets/img/mousepad.svg">
 							<span class="item-label"> Mousepad</span>
+							<!-- <div class="nav-item-group-holder">
+								<div class="nav-item-group-item">
+									<img src="assets/img/mousepad.svg" alt="">
+									<span>Testando</span>
+								</div>
+							</div> -->
 						</div>
 					</a>
 					<a href="#" class="nav-item-link">
@@ -209,7 +200,7 @@
 							<span class="item-label"> Simuladores</span>
 						</div>
 					</a>
-					<a href="#" class="nav-item-link">
+					<a href="/vestuario" class="nav-item-link">
 						<div class="nav-item">
 							<img alt="Simuladores" src="assets/img/vestuario.svg">
 							<span class="item-label"> Vestuário</span>
@@ -228,9 +219,15 @@
 			<div class="container nav-items-mobile" data-slideout-ignore>
 				<div class="nav-items-mobile">
 					<a href="#" class="nav-item-link">
-						<div class="nav-item">
+						<div class="nav-item nav-item-group">
 							<img alt="Pc Gamer" src="assets/img/pc.svg">
 							<span class="item-label"> Pc Gamer</span>
+							<!-- <div class="nav-item-group-holder">
+								<div class="nav-item-group-item">
+									<img src="assets/img/mousepad.svg" alt="">
+									<span>Testando</span>
+								</div>
+							</div> -->
 						</div>
 					</a>
 					<a href="#" class="nav-item-link">
@@ -287,7 +284,7 @@
 							<span class="item-label"> Simuladores</span>
 						</div>
 					</a>
-					<a href="#" class="nav-item-link">
+					<a href="/vestuario" class="nav-item-link">
 						<div class="nav-item">
 							<img alt="Simuladores" src="assets/img/vestuario.svg">
 							<span class="item-label"> Vestuário</span>
@@ -331,32 +328,27 @@
 
 
 			<section id="main-content">
-				<div class="accessory-title-holder">
-					<div class="accessory-title">
-						<p class="brand">RAZER</p>
-						<h3>CYNOSA PRO BUNDLE</h3>
-						<p class="category">COMBO MOUSE/TECLADO</p>
-					</div>
-				</div>
-			
-			<div class="container">
-			<div class="accessory-position">
-			<ul id="vertical">
-  				<li data-thumb="assets/img/thumb/cynosa.png">
-    				<img class="accessory-image animated fadeInLeft" src="assets/img/cynosa.png"/>
-  				</li>
-  				<li data-thumb="assets/img/thumb/cynosa2.png">
-    				<img class="accessory-image" src="assets/img/cynosa2.png"/>
-  				</li>
-  				<li data-thumb="assets/img/thumb/cynosa3.png">
-    				<img class="accessory-image" src="assets/img/cynosa3.png"/>
-  				</li>
-			</ul>
-			</div>
-			</div>
-
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<section class="home-content-holder container">
+					<div class="machine-title-holder">
+						<div class="machine-title">
+							<img src="/assets/img/fire.svg" class="noselect" alt="">
+							<span>FIRESTORM</span>
+						</div>
+						<span class="machine-slogan"> A EXPLOSÃO DE DESEMPENHO</span>
+					</div>
+					<div class="machine-holder">
+						<div class="machine">
+							<img src="/assets/img/firestorm_machine.png" class="noselect">
+						</div>
+						<div class="machine-price-holder">
+							<div class="machine-price">
+								<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 8.547,94</span></div></div>
+								<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 809,46</d></div>
+							</div>
+							<button type="button" class="machine-price-button"><span>COMPRAR</span></button>
+						</div>
+					</div>
+
 
 				</section>
 				<div id="footer">

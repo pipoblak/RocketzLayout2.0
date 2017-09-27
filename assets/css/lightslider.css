@@ -266,6 +266,11 @@
         left: 0;
     }
 }
+
+/* Thumbnails on the left */.lSSlideOuter.vertical.thumbsLeft .lSGallery {
+    right: auto;
+    left: 0;
+}
 @-webkit-keyframes topEnd {
     0% {
         top: 0;

@@ -4,7 +4,31 @@ var sidewrapper;
 closeSidewrapper=function(){
   sidewrapper.close();
 }
+var deltaX=0;
+var deltaY=0;
 jQuery(document).ready(function($) {
+  var navMobile = $(".container .nav-items-mobile")[0];
+  var mc = new Hammer.Manager(navMobile);
+  var Pan = new Hammer.Pan();
+  mc.add(Pan);
+
+  mc.on('panmove', function(e) {
+    var dX = deltaX + (e.deltaX);
+     $.Velocity.hook(navMobile, 'translateX', dX + 'px');
+  });
+  mc.on('panend', function(e) {
+    deltaX = deltaX + e.deltaX;
+    var navContainerWidth =  $(".container.nav-items-mobile").width();
+    var navMaxTranslate = ($(".container .nav-items-mobile").width() - navContainerWidth ) * (-1);
+    if(deltaX>0){
+       $.Velocity.hook(navMobile, 'translateX', 0 + 'px');
+       deltaX=0;
+    }
+    else if(deltaX<navMaxTranslate){
+      $.Velocity.hook(navMobile, 'translateX', navMaxTranslate + 'px');
+      deltaX=navMaxTranslate;
+    }
+  });
   if($("#content-slider").length)
   $("#content-slider").lightSlider({
     loop:false,
@@ -147,8 +171,8 @@ var isAssistBarActive;
 var lastScroll=0;
 $(".body-holder").scroll(function(event){
   var scroll = $(event.target).scrollTop();
-  if($("div[assist-bar-trigger=true]").length>=1){
-    var mydivpos =$("div[assist-bar-trigger=true]").offset().top;
+  if($("*[assist-bar-trigger]").length>=1){
+    var mydivpos =$("*[assist-bar-trigger]").offset().top;
     var assistBar= $("div[name*=assistBar]");
     if(scroll >= mydivpos + 150){
       if(assistBar.hasClass("hidden")){
@@ -191,10 +215,21 @@ $(document).on("click",".nav-mobile-button",function(event){
   var button = $(event.target).attr("data-id");
   var target = $($(".nav-items-mobile")[1]);
   var scroll = target.scrollLeft();
-  if(button=="right")
-    target.scrollLeft(target.scrollLeft()+ 56);
-  else
-    target.scrollLeft(target.scrollLeft()- 56);
+  var matrix = target.css('transform').replace(/[^0-9\-.,]/g, '').split(',');
+  var x = matrix[12] || matrix[4];
+  var y = matrix[13] || matrix[5];
+  x = (x===undefined? 0:x);
+  var navContainerWidth =  $(".container.nav-items-mobile").width();
+  var navMaxTranslate = ($(".container .nav-items-mobile").width() - navContainerWidth ) * (-1);
+  if(button=="right"){
+    var dx = x-72;
+    dx = (dx<navMaxTranslate? navMaxTranslate:dx);
+    $.Velocity.hook(target, 'translateX', + dx + 'px');
+  }else{
+    var dx=(parseInt(x) + parseInt(x===0? 0:72));
+    dx = (dx>=0? 0:dx);
+    $.Velocity.hook(target, 'translateX',  + dx + 'px');
+  }
 });
 
 //search

@@ -235,6 +235,9 @@
                     $slide.parent().addClass('vertical');
                     elSize = settings.verticalHeight;
                     $slide.css('height', elSize + 'px');
+                    if (settings.thumbsLeft) {
+                       $slide.parent().addClass('thumbsLeft');
+               }
                 } else {
                     elSize = $el.outerWidth();
                 }
@@ -355,7 +358,7 @@
                         }
                         var thumb = $children.eq(i * settings.slideMove).attr('data-thumb');
                         if (settings.gallery === true) {
-                            pagers += '<li style="width:100%;' + property + ':' + thumbWidth + 'px;' + gutter + ':' + settings.thumbMargin + 'px"><a href="#"><img src="' + thumb + '" /></a></li>';
+                            pagers += '<li style="width:100%;' + property + ':' + thumbWidth + 'px;' + gutter + ':' + settings.thumbMargin + 'px" class="animated fadeInLeft"><a href="#"><img src="' + thumb + '" /></a></li>';
                         } else {
                             pagers += '<li><a href="#">' + (i + 1) + '</a></li>';
                         }
@@ -389,11 +392,10 @@
                             property: pagerWidth + 'px',
                             'transition-duration': settings.speed + 'ms'
                         });
-                        if (settings.vertical === true) {
-                            $slide.parent().css('padding-right', (settings.vThumbWidth + settings.galleryMargin) + 'px');
-                        }
-                        $cSouter.find('.lSPager').css(property, pagerWidth + 'px');
-                    }
+                        if (settings.vertical === true) {   var padding = settings.thumbsLeft === true ? 'padding-left': 'padding-right';
+                            $slide.parent().css(padding, (settings.vThumbWidth + settings.galleryMargin) + 'px');
+									}
+					}
                     var $pager = $cSouter.find('.lSPager').find('li');
                     $pager.first().addClass('active');
                     $pager.on('click', function () {
@@ -415,7 +417,7 @@
                         cl = 'lSGallery';
                     }
                     $slide.after('<ul class="lSPager ' + cl + '"></ul>');
-                    var gMargin = (settings.vertical) ? 'margin-left' : 'margin-top';
+                    var gMargin = (settings.vertical) ? (settings.thumbsLeft) ? 'margin-right' : 'margin-left' : 'margin-top';
                     $slide.parent().find('.lSPager').css(gMargin, settings.galleryMargin + 'px');
                     refresh.createPager();
                 }
