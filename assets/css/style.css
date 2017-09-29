@@ -1281,6 +1281,18 @@ ul{
 .logo-link{
   width: 50%;
 }
+.logo-mobile-holder{
+  display: flex;
+}
+.logo-mobile{
+  margin: auto;
+  margin-left: 8px;
+  color: white;
+  font-size: 24px !important;
+}
+.logo-mobile:hover{
+  color:#656565;
+}
 .logo-full{
   width: 100%;
   padding: 16px;
