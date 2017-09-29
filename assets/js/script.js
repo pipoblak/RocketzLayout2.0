@@ -174,7 +174,7 @@ $(".body-holder").scroll(function(event){
   if($("*[assist-bar-trigger]").length>=1){
     var elementPos =$("*[assist-bar-trigger]").offset().top;
     var assistBar= $("div[name*=assistBar]");
-    var footerAssistBar=$(".footer-assist-bar");
+    var footerAssistBar=$(".footer-assist-bar[active]");
     if(elementPos<0){
       if(assistBar.hasClass("hidden")){
         assistBar.removeClass("hidden");
