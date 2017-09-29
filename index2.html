@@ -55,7 +55,14 @@
     <![endif]-->
     <script>
 	$(document).ready(function() {
-    $('#vertical').lightSlider({
+     $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+      } 
+	 });
+	  $('#vertical').lightSlider({
       gallery:true,
       item:1,
       vertical:true,
@@ -218,7 +225,7 @@
 				</div>
 			</div>
 			<div id="assistBar" class="hidden" name="assistBar">
-				<span class="product-name">Nome do Produto</span>
+				<span class="product-name">CYNOSA PRO BUNDLE</span>
 			</div>
 
 		</div>
@@ -339,7 +346,7 @@
 					</div>
 				</div>
 			
-			<div class="container">
+			<div class="container">	
 			<div class="accessory-position">
 			<ul id="vertical">
   				<li data-thumb="assets/img/thumb/cynosa.png">
@@ -352,8 +359,29 @@
     				<img class="accessory-image" src="assets/img/cynosa3.png"/>
   				</li>
 			</ul>
+			
+			<div class="acessory-spacer animated fadeInRight">
+					<div class="acessory-delivery">
+						<div class="accessory-info">
+							 <span class="fa fa-map-marker" data-location="SP"></span>
+							 <span class="accessory-content">
+								<b>PRONTA ENTREGA</b> <br> Retire esse protudo em nossa loja e economize no frete!
+							 </span>
+	 					 </div>
+					</div>
+					<div class="accessory-price-holder" assist-bar-trigger>
+						<div class="price-style">À VISTA<br><div class="price-amount"><span class="acessory-pricefront">R$ 478,72</span></div></div><br>
+						<div class="price-style-card"> NO CARTÃO SEM JUROS<br>12x <d> R$ 45,33</d></div>
+				</div>
+				
+				<div class="cart-accessory"><j><span>ADICIONAR AO CARRINHO</span></j></div>
+				<span class="frete">CALCULAR FRETE</span>
+				</div>
 			</div>
 			</div>
+				
+
+					
 
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<section class="home-content-holder container">
@@ -408,6 +436,7 @@
 							<p class="footer-content"><span class="fa fa-lock"></span> Segurança</p>
 							<div class="col-xs-6"><img class="img-footer" src="assets/img/comodo.png"></div>
 							<div class="col-xs-6"><img class="img-footer" src="assets/img/ssl.png"></div>
+							
 						</div>
 						<!-- <div class="col-md-4">
 							<p class="footer-content"><span class="fa fa-envelope-o"></span> Newsletter</p>

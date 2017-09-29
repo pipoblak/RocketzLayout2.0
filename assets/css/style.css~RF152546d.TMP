@@ -171,9 +171,8 @@ ul{
     .menushow {
         display: none !important;
     }
-    .footer-assist-bar{
+    #footer-assist-bar{
       height: 0px !important;
-      margin-top: 56px;
     }
     .main-banner{
       max-height: 500px;
@@ -440,19 +439,6 @@ ul{
     font-size: 24px;
     font-weight: 300;
   }
-  .footer-assist-bar>.machine-price>.price-style>.price-amount{
-    font-size: 20px !important;
-  }
-  .footer-assist-bar>.machine-price>.price-style{
-    font-size: 16px !important;
-  }
-  .footer-assist-bar>.machine-price>.price-style-card>d{
-    font-size: 20px !important;
-  }
-  .footer-assist-bar>.machine-price>.price-style-card{
-    font-size: 14px !important;
-    margin-left: 8px;
-  }
 }
 @media only screen and (max-width: 640px) {
   .main-banner>.container{
@@ -661,16 +647,20 @@ ul{
     font-size: 23px;
     height: 80%;
   }
-  .footer-assist-bar>.machine-price>.price-style>.price-amount{
+  #footer-assist-bar>.machine-price{
+    height: 56px;
+    width: 80%;
+  }
+  #footer-assist-bar>.machine-price>.price-style>.price-amount{
     font-size: 16px !important;
   }
-  .footer-assist-bar>.machine-price>.price-style{
+  #footer-assist-bar>.machine-price>.price-style{
     font-size: 12px !important;
   }
-  .footer-assist-bar>.machine-price>.price-style-card>d{
+  #footer-assist-bar>.machine-price>.price-style-card>d{
     font-size: 16px !important;
   }
-  .footer-assist-bar>.machine-price>.price-style-card{
+  #footer-assist-bar>.machine-price>.price-style-card{
     font-size: 10px !important;
     margin-left: 8px;
   }
@@ -711,20 +701,20 @@ ul{
 	  margin-top: 15px;
     width: 170px !important;
 	}
-  .footer-assist-bar>.machine-price{
+  #footer-assist-bar>.machine-price{
     height: 56px;
     width: 80%;
   }
-  .footer-assist-bar>.machine-price>.price-style>.price-amount{
+  #footer-assist-bar>.machine-price>.price-style>.price-amount{
     font-size: 16px !important;
   }
-  .footer-assist-bar>.machine-price>.price-style{
+  #footer-assist-bar>.machine-price>.price-style{
     font-size: 12px !important;
   }
-  .footer-assist-bar>.machine-price>.price-style-card>d{
+  #footer-assist-bar>.machine-price>.price-style-card>d{
     font-size: 16px !important;
   }
-  .footer-assist-bar>.machine-price>.price-style-card{
+  #footer-assist-bar>.machine-price>.price-style-card{
     font-size: 10px !important;
     margin-left: 8px;
   }
@@ -1527,7 +1517,7 @@ ul{
 
 .hidden { display: none; }
 
-.footer-assist-bar{
+#footer-assist-bar{
   width: 100%;
   background: white;
   border-top: solid 1px #ccc;
@@ -1536,29 +1526,24 @@ ul{
   bottom: 0;
   opacity: 1;
   display: flex;
-  height: 56px;
-  max-height: 56px;
 }
-.footer-assist-bar>.machine-price{
+#footer-assist-bar>.machine-price{
   width: 80%;
 }
-.footer-assist-bar.hidden{
+#footer-assist-bar.hidden{
   display: flex !important;
   visibility: hidden;
   transform: translateY(100px);
   opacity: 0;
 }
-.footer-assist-bar-add-to-cart-holder{
+#footer-assist-bar-add-to-cart-holder{
   color: #252525;
   display:flex;
   width: 20%;
 }
-.footer-assist-bar-add-to-cart-holder>span{
+#footer-assist-bar-add-to-cart-holder>span{
   margin: auto;
   font-size: 32px;
-}
-.footer-assist-bar-add-to-cart-holder:hover{
-  color: #656565;
 }
 .home-content-holder{
   position: relative;
@@ -2508,7 +2493,6 @@ ul{
 }
 
 .acessory-spacer{
-	margin: auto;
 
 }
 .brand {
@@ -2553,7 +2537,7 @@ ul{
 	flex-direction: column;
 	flex-wrap: wrap;
 	margin-top: 16px;
-	margin-left: 80px;
+	margin-left: 70px;
  }
 
 .cart-accessory> j{
@@ -2561,12 +2545,8 @@ ul{
 }
 
 .frete {
-	font-family: "Saira";
-	font-size: 12px;
-	font-weight: thin;
-	text-align: center;
 	float: right;
-	margin-right: 80px;
+	margin-left: 30px;
 }
 .machine-title-holder{
   display: flex;

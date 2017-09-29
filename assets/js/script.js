@@ -172,16 +172,23 @@ var lastScroll=0;
 $(".body-holder").scroll(function(event){
   var scroll = $(event.target).scrollTop();
   if($("*[assist-bar-trigger]").length>=1){
-    var mydivpos =$("*[assist-bar-trigger]").offset().top;
+    var elementPos =$("*[assist-bar-trigger]").offset().top;
     var assistBar= $("div[name*=assistBar]");
-    if(scroll >= mydivpos + 150){
+    var footerAssistBar=$(".footer-assist-bar");
+    if(elementPos<0){
       if(assistBar.hasClass("hidden")){
         assistBar.removeClass("hidden");
+        if(footerAssistBar){
+          footerAssistBar.removeClass("hidden");
+        }
       }
     }
     else{
       if(!assistBar.hasClass("hidden")){
         assistBar.addClass("hidden");
+        if(footerAssistBar){
+          footerAssistBar.addClass("hidden");
+        }
       }
     }
 
