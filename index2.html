@@ -54,27 +54,21 @@
         <p class="browsehappy">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor<a href="http://browsehappy.com/"> atualize o seu navegador</a> para melhorar a sua experiência.</p>
     <![endif]-->
     <script>
-	$(document).ready(function() {
-     $('#autoWidth').lightSlider({
-        autoWidth:true,
-        loop:true,
-        onSliderLoad: function() {
-            $('#autoWidth').removeClass('cS-hidden');
-      } 
-	 });
-	  $('#vertical').lightSlider({
-      gallery:true,
-      item:1,
-      vertical:true,
-	  thumbsLeft:true,
-      vThumbWidth:100,
-	  verticalHeight:295,
-      thumbItem:4,
-      slideMargin:0,
-	  galleryMargin: 5,
-	  controls: false,
-    });  
-  });</script>
+		var sliderProduct;
+			$(document).ready(function() {
+		   sliderProduct=$('#vertical').lightSlider({
+		      gallery:true,
+		      item:1,
+		      vertical:true,
+			  	thumbsLeft:true,
+		      vThumbWidth:100,
+			  	verticalHeight:295,
+		      thumbItem:4,
+		      slideMargin:0,
+			  	galleryMargin: 5,
+			  	controls: false,
+		    });
+		  });</script>
     <script>if(location.hostname.match(/ricostacruz\.com$/)){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()}</script>
 </head>
 <body id="home" style="display:flex;">
@@ -225,7 +219,31 @@
 				</div>
 			</div>
 			<div id="assistBar" class="hidden" name="assistBar">
-				<span class="product-name">CYNOSA PRO BUNDLE</span>
+				<div class="assist-bar-machine-holder">
+					<div class="assist-bar-accessory-title-holder">
+						<img src="assets/img/Thumb/cynosa.png" class="assist-bar-machine-logo" style="width: 100px;">
+						<span class="assist-bar-machine-title">CYNOSA PRO BUNDLE</span>
+					</div>
+					<div class="machine-variations-holder">
+						<div class="machine-variation selected" data-variation="">
+
+						</div>
+						<div class="machine-variation" data-variation="">
+
+						</div>
+						<div class="machine-variation" data-variation="">
+
+						</div>
+						<div class="machine-variation" data-variation="">
+
+						</div>
+					</div>
+					<div class="assist-bar-machine-price-holder">
+						<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 478,72</span></div></div>
+						<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 45,33</d></div>
+					</div>
+					<button type="button" class="machine-price-button"><span>COMPRAR</span></button>
+				</div>
 			</div>
 
 		</div>
@@ -304,7 +322,11 @@
 			</div>
 			<span class="fa fa-angle-right nav-mobile-button" data-id="right"></span>
 			<div id="assistBar" class="hidden" name="assistBar" >
-				<span class="product-name">Nome do Produto</span>
+				<span class="product-name">
+					<div class="assist-bar-accessory-mobile-holder">
+						<img src="assets/img/Thumb/cynosa.png" class="assist-bar-machine-logo" style="width: 100px;">
+						<span class="assist-bar-machine-title">CYNOSA PRO BUNDLE</span>
+					</div></span>
 			</div>
 		</div>
 		<div class="body-holder" style="background-color:;">
@@ -345,8 +367,8 @@
 						<p class="category">COMBO MOUSE/TECLADO</p>
 					</div>
 				</div>
-			
-			<div class="container">	
+
+			<div class="container">
 			<div class="accessory-position">
 			<ul id="vertical">
   				<li data-thumb="assets/img/thumb/cynosa.png">
@@ -359,7 +381,7 @@
     				<img class="accessory-image" src="assets/img/cynosa3.png"/>
   				</li>
 			</ul>
-			
+
 			<div class="acessory-spacer animated fadeInRight">
 					<div class="acessory-delivery">
 						<div class="accessory-info">
@@ -373,15 +395,92 @@
 						<div class="price-style">À VISTA<br><div class="price-amount"><span class="acessory-pricefront">R$ 478,72</span></div></div><br>
 						<div class="price-style-card"> NO CARTÃO SEM JUROS<br>12x <d> R$ 45,33</d></div>
 				</div>
-				
+
 				<div class="cart-accessory"><j><span>ADICIONAR AO CARRINHO</span></j></div>
 				<span class="frete">CALCULAR FRETE</span>
 				</div>
 			</div>
 			</div>
-				
 
-					
+			<div class="accessory-content-holder">
+			<table class="table-fill">
+  <thead>
+<tr></tr>
+</thead>
+</table>
+<div class="table-title">
+  <h3>ESPECIFICAÇÕES</h3>
+</div>
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left">GERAL</th>
+      <th class="text-left"></th>
+    </tr>
+  </thead>
+  <tbody class="table-hover">
+    <tr>
+      <td class="text-left">Marca:</td>
+      <td class="text-left"><a href="https://rocketz.com.br/razer">Razer</a></td>
+    </tr>
+    <tr>
+      <td class="text-left">Modelo:</td>
+      <td class="text-left">Blackwidow Chroma V2</td>
+    </tr>
+    <tr>
+      <td class="text-left">Tipo de teclado:</td>
+      <td class="text-left">Mecânico (Yellow)</td>
+    </tr>
+    <tr>
+      <td class="text-left">Tipo de conexão:</td>
+      <td class="text-left">USB 2.0</td>
+    </tr>
+    <tr>
+      <td class="text-left">Macros:</td>
+      <td class="text-left">5</td>
+    </tr>
+    <tr>
+      <td class="text-left">Velocidade do USB:</td>
+      <td class="text-left">Velocidade máxima</td>
+    </tr>
+      <tr>
+<td class="text-left">Iluminação:</td>
+<td class="text-left">RGB</td>
+</tr>
+ <tr>
+<td class="text-left">Comprimento do cabo (alimentação/carregamento):</td>
+<td class="text-left">1,8 m</td>
+</tr>
+  </tbody>
+</table>
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">Informações</th>
+<th class="text-left"></th>
+</tr>
+</thead>
+ <tbody><tr>
+<td class="text-left">Altura:</td>
+<td class="text-left">171 mm</td>
+</tr>
+ <tr>
+<td class="text-left">Largura:</td>
+<td class="text-left">475 mm</td>
+</tr>
+  <tr>
+<td class="text-left">Profundidade:</td>
+<td class="text-left">39 mm</td>
+</tr>
+  <tr>
+<td class="text-left">Peso:</td>
+<td class="text-left">1500 g</td>
+</tr>
+</tbody>
+</table>
+				
+			</div>
+
 
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<section class="home-content-holder container">
@@ -436,7 +535,7 @@
 							<p class="footer-content"><span class="fa fa-lock"></span> Segurança</p>
 							<div class="col-xs-6"><img class="img-footer" src="assets/img/comodo.png"></div>
 							<div class="col-xs-6"><img class="img-footer" src="assets/img/ssl.png"></div>
-							
+
 						</div>
 						<!-- <div class="col-md-4">
 							<p class="footer-content"><span class="fa fa-envelope-o"></span> Newsletter</p>
@@ -472,7 +571,15 @@
 
 
 		</div>
-
+<div class="footer-assist-bar hidden-md hidden-lg hidden" active>
+			<div class="machine-price">
+				<div class="col-md-6 price-style">À VISTA<br><div class="price-amount"><span>R$ 478,72</span></div></div>
+				<div class="col-md-6 price-style-card">PARCELADO SEM JUROS<br>12x <d>R$ 45,33</d></div>
+			</div>
+			<div class="footer-assist-bar-add-to-cart-holder" >
+				<span class="fa fa-cart-arrow-down"></span>
+			</div>
+		</div>
 	</div>
 
 

@@ -23,6 +23,7 @@ ul{
   user-select: none;
   user-drag:none;
   -webkit-user-drag:none;
+  cursor: default;
 }
 .accelerated {
   -webkit-transform: translateZ(0);
@@ -236,8 +237,39 @@ ul{
       font-size: 42px;
       height: 80%;
     }
-
-
+    .machine-landing-content-card-text-holder{
+      width: 50%;
+    }
+    .machine-landing-content-card-text-title{
+      font-size:32px;
+      margin:auto;
+      margin-bottom: 48px;
+    }
+    .machine-landing-content-card-text{
+      font-size: 24px;
+      margin:auto;
+      margin-top: 0;
+    }
+    .machine-landing-content-title-holder{
+      margin-bottom: 64px;
+      margin-top: 64px;
+    }
+    .machine-landing-content-card-img-holder{
+      width: 50%;
+    }
+    .machine-landing-content-card-img-holder>img{
+      margin: auto;
+      margin-right: 15%;
+    }
+    .machine-landing-content-title{
+      font-size: 64px;
+    }
+    .machine-landing-content-personalization-title{
+      font-size: 64px;
+      padding: 16px;
+      margin: auto;
+      margin-right: 0;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -363,6 +395,39 @@ ul{
     font-size: 42px;
     height: 80%;
   }
+  .machine-landing-content-card-text-holder{
+    width: 100%;
+  }
+  .machine-landing-content-card-text-title{
+    font-size:32px;
+    margin:auto;
+    margin-bottom: 48px;
+    margin-top: 48px;
+  }
+  .machine-landing-content-title-holder{
+    margin-bottom: 48px;
+    margin-top: 48px;
+  }
+  .machine-landing-content-card-text{
+    font-size: 24px;
+    margin:auto;
+    margin-top: 0;
+  }
+  .machine-landing-content-card-img-holder{
+    width: 100%;
+  }
+  .machine-landing-content-card-img-holder>img{
+    margin: auto;
+    margin-right: 15%;
+  }
+  .machine-landing-content-title{
+    font-size: 48px;
+  }
+  .machine-landing-content-personalization-title{
+    font-size: 64px;
+    padding: 16px;
+    margin: auto;
+  }
 }
 
 
@@ -373,6 +438,7 @@ ul{
   .sales-holder{
     margin-top: 126px;
   }
+
 }
 @media only screen and (max-width: 768px) {
   .main-banner>.container{
@@ -453,6 +519,36 @@ ul{
     font-size: 14px !important;
     margin-left: 8px;
   }
+  .machine-landing-content-card-text-holder{
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  .machine-landing-content-title-holder{
+    margin-bottom: 48px;
+    margin-top: 48px;
+  }
+  .machine-landing-content-card-text-title{
+    font-size:32px;
+    margin:auto;
+    margin-bottom: 48px;
+    margin-top: 48px;
+  }
+  .machine-landing-content-card-text{
+    font-size: 24px;
+    margin:auto;
+    margin-top: 0;
+  }
+  .machine-landing-content-card-img-holder{
+    width: 100%;
+  }
+  .machine-landing-content-card-img-holder>img{
+    margin: auto;
+  }
+  .machine-landing-content-personalization-title{
+    font-size: 48px;
+    padding: 16px;
+    margin: auto;
+  }
 }
 @media only screen and (max-width: 640px) {
   .main-banner>.container{
@@ -463,6 +559,10 @@ ul{
   }
   .main-banner.rktz{
     max-height: 200px;
+  }
+  .machine-landing-content-title-holder{
+    margin-bottom: 48px;
+    margin-top: 48px;
   }
 }
 @media only screen and (max-width: 537px) {
@@ -539,6 +639,44 @@ ul{
     left: 0;
     font-size: 32px;
     height: 80%;
+  }
+  .machine-landing-content-holder{
+    margin-top: 48px;
+  }
+  .machine-landing-content-title{
+    font-size: 32px;
+  }
+  .machine-landing-content-title-holder{
+    margin-bottom: 48px;
+    margin-top: 48px;
+  }
+  .machine-landing-content-card-text-holder{
+    width: 100%;
+    min-width: 100% !important;
+    margin-bottom: 48px;
+  }
+  .machine-landing-content-card-text-title{
+    font-size:24px;
+    margin:auto;
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .machine-landing-content-card-text{
+    font-size: 18px;
+    margin:auto;
+    margin-top: 0;
+  }
+  .machine-landing-content-card-img-holder{
+    width: 100%;
+  }
+  .machine-landing-content-card-img-holder>img{
+    margin: auto;
+    max-height: 400px;
+  }
+  .machine-landing-content-personalization-title{
+    font-size: 32px;
+    padding: 16px;
+    margin: auto;
   }
 }
 @media only screen and (max-width: 425px) {
@@ -676,6 +814,9 @@ ul{
   }
 }
 @media only screen and (max-width: 375px) {
+  .search-holder-mobile{
+    margin-left: 8px !important;
+  }
   .content-menu-option-label{
     font-size: 10px;
   }
@@ -727,6 +868,44 @@ ul{
   .footer-assist-bar>.machine-price>.price-style-card{
     font-size: 10px !important;
     margin-left: 8px;
+  }
+  .machine-landing-content-holder{
+    margin-top: 48px;
+  }
+  .machine-landing-content-title-holder{
+    margin-bottom: 48px;
+    margin-top: 48px;
+  }
+  .machine-landing-content-title{
+    font-size: 24px;
+  }
+  .machine-landing-content-card-text-holder{
+    width: 100%;
+    min-width: 100% !important;
+    margin-bottom: 24px;
+  }
+  .machine-landing-content-card-text-title{
+    font-size:18px;
+    margin:auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .machine-landing-content-card-text{
+    font-size: 14px;
+    margin:auto;
+    margin-top: 0;
+  }
+  .machine-landing-content-card-img-holder{
+    width: 100%;
+  }
+  .machine-landing-content-card-img-holder>img{
+    margin: auto;
+    max-height: 350px;
+  }
+  .machine-landing-content-personalization-title{
+    font-size: 22px;
+    padding: 16px;
+    margin: auto;
   }
 }
 
@@ -967,6 +1146,7 @@ ul{
   height: 100%;
   margin: auto;
   margin-right: 16px;
+  margin-left: 16px;
 }
 .search-holder-mobile:hover>span{
   color:#ccc;
@@ -1283,6 +1463,8 @@ ul{
 }
 .logo-mobile-holder{
   display: flex;
+  margin: auto;
+  margin-right: 16px;
 }
 .logo-mobile{
   margin: auto;
@@ -1572,6 +1754,87 @@ ul{
 .footer-assist-bar-add-to-cart-holder:hover{
   color: #656565;
 }
+.assist-bar-machine-holder{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.assist-bar-machine-title-holder{
+  display: flex;
+}
+.assist-bar-machine-title{
+  font-family: "Saira";
+  font-size: 32px;
+  margin: auto 0;
+  margin-left: 16px;
+}
+.assist-bar-machine-logo{
+  margin: auto;
+  height: 80%;
+  margin-left: 16px;
+  margin-right: 0;
+  width: 10%;
+}
+.assist-bar-machine-holder>.assist-bar-machine-title-holder{
+  display: flex;
+  width: 20%;
+}
+.assist-bar-machine-holder>.assist-bar-accessory-title-holder{
+  display: flex;
+  width: 20%;
+  white-space: nowrap;
+}
+
+.assist-bar-machine-holder>.assist-bar-accessory-mobile-holder {
+  text-align: center;
+  display: flex;
+  width: 20%;
+  white-space: nowrap;
+  margin-left: 150px;
+
+}
+.assist-bar-machine-holder>.assist-bar-machine-price-holder{
+  display: flex;
+  width: 35%;
+}
+.assist-bar-machine-holder>div>.price-style{
+  font-size: 14px;
+}
+.assist-bar-machine-holder>div>.price-amount{
+  font-size: 22px;
+}
+.assist-bar-machine-holder>.machine-variations-holder{
+  height: 48px;
+  margin: auto 0;
+  margin-left: 32px;
+}
+.assist-bar-machine-holder>.machine-variations-holder>.machine-variation{
+  height: 100%;
+  width: 48px;
+  margin: auto;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.assist-bar-machine-holder>.machine-variations-holder>.machine-variation::after{
+  content: attr(data-variation);
+  top: 16%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 22px;
+  height: 80%;
+}
+.assist-bar-machine-holder>.machine-price-button{
+  width: 15%;
+  padding: 4px;
+  margin-top: 0;
+  margin: auto;
+}
+.nav-mobile>#assistBar>.assist-bar-machine-holder>.machine-variations-holder{
+  height: 48px;
+  margin: auto ;
+}
+
 .home-content-holder{
   position: relative;
 }
@@ -1900,11 +2163,13 @@ ul{
   text-align: center;
   visibility: visible;
   color:white;
+  cursor: pointer;
 }
 .pc-box:hover>.pc-box-hover{
   visibility: visible;
   transition: all 1s;
   opacity: 1;
+  cursor: pointer;
 }
 .pc-box-hover{
   display: flex;
@@ -1985,6 +2250,7 @@ ul{
 }
 .product-box:hover>.product-box-top>.product-box-img-holder>img{
   transform: scale(1.1);
+  cursor: pointer;
 }
 .product-box:hover{
   cursor: pointer;
@@ -1994,6 +2260,7 @@ ul{
   text-align: center;
   visibility: visible;
   color:white;
+  cursor: pointer;
 }
 .product-box>.pc-box-hover>span{
   margin: auto auto 35% auto;
@@ -2008,6 +2275,7 @@ ul{
   visibility: visible;
   transition: all 1s;
   opacity: 1;
+  cursor: pointer;
 }
 .product-box-top{
   display: flex;
@@ -2558,7 +2826,7 @@ ul{
 	color: #FFFFFF;
 	font-family: "Saira";
 	font-size: 15px;
-	font-weight: thin;
+	font-weight: 100;
 	text-align: center;
 	background: #252525;
 	display: flex;
@@ -2567,7 +2835,27 @@ ul{
 	margin-top: 16px;
 	margin-left: 80px;
  }
+.cart-accessory-assist-bar{
+	width: 220px;
+	height: 35px;
+	color: #FFFFFF;
+	font-family: "Saira";
+	font-size: 15px;
+	font-weight: 100;
+	text-align: center;
+	background: #252525;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-top: 8px;
 
+ }
+
+.cart-accessory-assist-bar> j{
+	float: right;
+	white-space: nowrap;
+	margin: auto;
+}
 .cart-accessory> j{
 	margin: auto;
 }
@@ -2579,6 +2867,37 @@ ul{
 	text-align: center;
 	float: right;
 	margin-right: 80px;
+}
+
+.accessory-name{
+	color: #000000;
+	font-family: "Saira";
+	font-size: 30px;
+
+}
+
+.position-accessory {
+	margin-left: 16px;
+	margin-right: 16px;
+
+}
+
+.accessory-assist-bar-holder{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-left: 300px;
+
+}
+
+.assist-bar-accessory-title {
+	white-space: nowrap;
+}
+
+.accessory-assist-bar-holder> div{
+	margin-left: 25px;
+	white-space: nowrap;
+
 }
 .machine-title-holder{
   display: flex;
@@ -2663,69 +2982,220 @@ ul{
 .machine-price-button:focus{
   outline: none;
 }
-.assist-bar-machine-holder{
+.machine-landing-content-holder{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.machine-landing-content-holder>.container{
+  max-width: 100vw;
+}
+.machine-landing-content-title-holder{
+  display: flex;
+}
+.machine-landing-content-title{
+  text-align: center;
+  font-family: "Saira";
+  width: 100%;
+}
+.machine-landing-content-card-holder{
   display: flex;
   width: 100%;
-  height: 100%;
+  margin-bottom:120px;
 }
-.assist-bar-machine-title-holder{
+.machine-landing-content-divisor{
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.machine-landing-content-card-holder.img-left{
+  flex-wrap: wrap;
+}
+.machine-landing-content-card-holder.img-right{
+  flex-wrap: wrap-reverse;
+}
+.machine-landing-content-card-text-holder{
   display: flex;
+  flex-direction: column;
+  min-width: 360px;
+  max-width: 570px;
+  margin: auto;
 }
-.assist-bar-machine-title{
+.machine-landing-content-card-text-title{
+  width: 100%;
+  text-align: center;
   font-family: "Saira";
-  font-size: 32px;
-  margin: auto 0;
-  margin-left: 16px;
 }
-.assist-bar-machine-logo{
-  margin: auto;
-  height: 80%;
-  margin-left: 16px;
-  margin-right: 0;
-  width: 10%;
+.machine-landing-content-card-text{
+  width: 100%;
+  font-family: "Saira";
+  font-weight: 200;
+  text-align: justify;
 }
-.assist-bar-machine-holder>.assist-bar-machine-title-holder{
+.machine-landing-content-card-img-holder{
   display: flex;
-  width: 20%;
+  flex-direction: column;
+  max-width: 570px;
+  margin: auto;
 }
-.assist-bar-machine-holder>.assist-bar-machine-price-holder{
+.machine-landing-content-card-img-holder>img{
+  margin: auto;
+  max-width: 100%;
+}
+.machine-landing-content-full-holder{
+  width: 100%;
+  background: #252525;
+}
+.machine-landing-content-personalization-title-holder{
+  padding-top: 48px;
+  padding-bottom: 48px;
   display: flex;
-  width: 35%;
 }
-.assist-bar-machine-holder>div>.price-style{
-  font-size: 14px;
+.machine-landing-content-personalization-title{
+  background: white;
+  font-weight: 200;
+  font-family: "Saira";
+  color: #252525;
 }
-.assist-bar-machine-holder>div>.price-amount{
-  font-size: 22px;
+
+.machine-landing-content-personalization-content-holder{
+  display: flex;
+  color:white;
 }
-.assist-bar-machine-holder>.machine-variations-holder{
-  height: 48px;
-  margin: auto 0;
-  margin-left: 32px;
+.machine-landing-content-benefits-holder{
+  width: 100%;
+  display: flex;
 }
-.assist-bar-machine-holder>.machine-variations-holder>.machine-variation{
-  height: 100%;
-  width: 48px;
+
+div.table-title {
+  display: block;
+  font-family: "Saira";
+  padding-left:10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #4D4D4D;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Saira";
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
   margin: auto;
-  margin-left: 8px;
-  margin-right: 8px;
+  max-width: 1200px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
 }
-.assist-bar-machine-holder>.machine-variations-holder>.machine-variation::after{
-  content: attr(data-variation);
-  top: 16%;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  font-size: 22px;
-  height: 80%;
+ 
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
 }
-.assist-bar-machine-holder>.machine-price-button{
-  width: 15%;
-  padding: 4px;
-  margin-top: 0;
-  margin: auto;
+
+th:first-child {
+  border-top-left-radius:3px;
 }
-.nav-mobile>#assistBar>.assist-bar-machine-holder>.machine-variations-holder{
-  height: 48px;
-  margin: auto ;
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
 }
